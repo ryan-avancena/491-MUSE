@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-id3": "^0.2.8",
+    "string-similarity": "^4.0.4"
+  }
+}
