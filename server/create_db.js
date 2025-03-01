@@ -14,7 +14,8 @@ if (!fs.existsSync(dataDir)) {
 function writeCSV(data, isFirstWrite = false) {
     const headers = [
         "Title", "Artist", "Album", "ReleaseDate","ID", "Key", "BPM", 
-        "Acousticness", "Popularity", "Danceability", 
+        "Acousticness", "Popularity", "Happiness",
+        "Danceability", 
         "Instrumentalness", "Energy", "Speechiness", "Loudness", "Cover"
     ];
     
@@ -28,6 +29,7 @@ function writeCSV(data, isFirstWrite = false) {
         result.b, 
         result.ac, 
         result.p, 
+        result.h,
         result.da, 
         result.i, 
         result.e, 
@@ -79,7 +81,7 @@ async function searchSong(query, isFirstWrite = false) {
 
 // Search queries for multiple artists sequentially
 async function searchAllArtists() {
-    const RAP_ARTISTS = ["Drake", "Kendrick Lamar", "Future", "The Weeknd"];
+    const RAP_ARTISTS = ["Drake", "Kendrick Lamar", "Future", "Tupac", "50 Cent"];
 
     // Delete existing file to start fresh
     if (fs.existsSync(CSV_FILE)) {
