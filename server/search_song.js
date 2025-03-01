@@ -31,6 +31,6 @@ async function searchSong(query) {
 }
 
 // Example search query
-const query = "dashstar - Knock2";
-
-searchSong(query);
+const query = "die with a smile - bruno mars";
+r = searchSong(query);
+// console.log(r)u
