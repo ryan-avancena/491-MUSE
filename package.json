@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "node-id3": "^0.2.8",
-    "string-similarity": "^4.0.4"
+    "string-similarity": "^4.0.4",
+    "yarn": "^1.22.22"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/server.js"
   }
 }
