@@ -43,15 +43,15 @@ GENRE_GROUPS = {
     "hip-hop": ["hip-hop", "r-n-b"],
     "classical": ["classical", "piano", "opera"],
     "metal": ["black-metal", "death-metal", "heavy-metal", "metal", "metalcore", "hardcore", "grindcore"],
-    "folk": ["folk", "bluegrass"],
+    # "folk": ["folk", "bluegrass"],
     "jazz": ["jazz"],
     "country": ["country", "honky-tonk"],
     "latin": ["latin", "latino", "samba", "salsa", "pagode", "sertanejo", "mpb", "brazil"],
     "reggae": ["reggae", "dub", "dancehall", "ska"],
     "world": ["afrobeat", "turkish", "iranian", "malay", "world-music", "french", "german", "swedish", "spanish"],
     "ambient": ["ambient", "chill", "study", "sleep", "new-age"],
-    "kids": ["children", "disney", "kids"],
-    "comedy": ["comedy", "party", "happy", "romance", "show-tunes"],
+    # "kids": ["children", "disney", "kids"],
+    # "comedy": ["comedy", "party", "happy", "romance", "show-tunes"],
     "other": ["anime", "j-dance", "j-idol", "british", "detroit-techno", "breakbeat"],
 }
 
@@ -92,51 +92,56 @@ if __name__ == '__main__':
 
     tracks["artists"] = [preprocessing.fix_artists(artist) for artist in tracks["artists"]]
     
-    tracks.insert(
-        0, "song_description", tracks["track_name"] + " - " + tracks["artists"]
-    )
+    # tracks.insert(
+    #     0, "song_description", tracks["track_name"] + " - " + tracks["artists"]
+    # )
 
-    tracks = preprocessing.group_by_genre(tracks)
+    # tracks = preprocessing.group_by_genre(tracks)
 
 
-    tokenized_song_descs = [word_tokenize(str(v).lower()) for v in tracks["song_description"]]
+    # tokenized_song_descs = [word_tokenize(str(v).lower()) for v in tracks["song_description"]]
 
-    # print(tokenized_song_descs)
+    # # print(tokenized_song_descs)
 
-    scaler = StandardScaler()
+    # scaler = StandardScaler()
 
-    EMBEDDING_DIM = len(NUMERIC_FEATURES)
+    # EMBEDDING_DIM = len(NUMERIC_FEATURES)
 
-    model = Word2Vec(
-        sentences=tokenized_song_descs,
-        vector_size=EMBEDDING_DIM,
-        window=5,
-        min_count=1,
-        sg=1
-    )
+    # model = Word2Vec(
+    #     sentences=tokenized_song_descs,
+    #     vector_size=EMBEDDING_DIM,
+    #     window=5,
+    #     min_count=1,
+    #     sg=1
+    # )
 
-    categorical_embeddings = [
-        preprocessing.get_embedding(song_descs, model, EMBEDDING_DIM) for song_descs in tokenized_song_descs
-    ]
+    # categorical_embeddings = [
+    #     preprocessing.get_embedding(song_descs, model, EMBEDDING_DIM) for song_descs in tokenized_song_descs
+    # ]
 
-    numeric_embeddings = scaler.fit_transform(tracks[NUMERIC_FEATURES])
+    # numeric_embeddings = scaler.fit_transform(tracks[NUMERIC_FEATURES])
 
-    row_embeddings = [
-        np.concatenate([cat_row, num_row]) for cat_row, num_row in zip(categorical_embeddings, numeric_embeddings)
-    ]
+    # row_embeddings = [
+    #     np.concatenate([cat_row, num_row]) for cat_row, num_row in zip(categorical_embeddings, numeric_embeddings)
+    # ]
 
-    # print(row_embeddings.head())
+    # # print(row_embeddings.head())
 
-    embedded_songs = tracks[IDENTIFIERS + THEORY_IDENTIFIERS].copy()
+    # embedded_songs = tracks[IDENTIFIERS + THEORY_IDENTIFIERS].copy()
 
-    embedded_songs["song_embeddings"] = row_embeddings
+    # embedded_songs["song_embeddings"] = row_embeddings
 
-    print(embedded_songs.head())
+    # print(embedded_songs.head())
 
     # a = preprocessing.show_embeddings(categorical_embeddings)
     # print(a)
 
     # print(categorical_embeddings)
+
+
+
+
+
 
 
 
