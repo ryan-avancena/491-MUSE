@@ -4,13 +4,12 @@ const { search } = require('./tunebat');
 
 const CSV_FILE = path.join(__dirname, "../data/songs_database.csv");
 
-// Ensure the directory exists
 const dataDir = path.dirname(CSV_FILE);
 if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// Function to write CSV data
+// csv data
 function writeCSV(data, isFirstWrite = false) {
     const headers = [
         "Title", "Artist", "Album", "ReleaseDate","ID", "Key", "BPM", 
@@ -20,9 +19,9 @@ function writeCSV(data, isFirstWrite = false) {
     ];
     
     const csvRows = data.map(result => [
-        `"${result.n.replace(/"/g, '""')}"`,  // Title: Ensure proper quoting
-        `"${JSON.stringify(result.as).replace(/"/g, '""')}"`,  // Fix: Properly escape double quotes
-        `"${result.an.replace(/"/g, '""')}"`,  // Album: Properly escape quotes
+        `"${result.n.replace(/"/g, '""')}"`,                        // NAME
+        `"${JSON.stringify(result.as).replace(/"/g, '""')}"`,       // 
+        `"${result.an.replace(/"/g, '""')}"`, 
         result.rd,
         result.id, 
         result.k, 
@@ -38,7 +37,7 @@ function writeCSV(data, isFirstWrite = false) {
         `"${result.ci && result.ci[0] ? result.ci[0].iu : ''}"`  // Only add value if available
     ].join(","));
 
-    // If first write, include headers; otherwise, just append data
+    // if first write, include headers; otherwise, just append data
     const csvData = isFirstWrite 
         ? [headers.join(","), ...csvRows].join("\n") 
         : csvRows.join("\n");
@@ -48,13 +47,13 @@ function writeCSV(data, isFirstWrite = false) {
 
 async function searchSong(query, isFirstWrite = false) {
     try {
-        // Search using the query
+        
         const results = await search(query);
 
         if (results.length > 0) {
             console.log(`Search Results for ${query}: ${results.length}`);
 
-            // Convert results to a dictionary to remove duplicates (use ID as key)
+            // convert results to a dictionary to remove duplicates (use ID as key)
             const uniqueResults = {};
             results.forEach(result => {
                 if (!uniqueResults[result.id]) {
@@ -62,11 +61,11 @@ async function searchSong(query, isFirstWrite = false) {
                 }
             });
 
-            // Convert unique results back to an array
+            // convert unique results back to an array
             const uniqueSongs = Object.values(uniqueResults);
             console.log(`Unique songs found for ${query}: ${uniqueSongs.length}`);
 
-            // Write to CSV (only add headers if it's the first artist)
+            // write to CSV (only add headers if it's the first artist)
             writeCSV(uniqueSongs, isFirstWrite);
             
             console.log(`CSV updated with ${uniqueSongs.length} songs from ${query}`);
@@ -93,5 +92,4 @@ async function searchAllArtists() {
     }
 }
 
-// Run the function
 searchAllArtists();

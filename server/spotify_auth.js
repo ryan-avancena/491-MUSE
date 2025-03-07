@@ -6,13 +6,13 @@ import session from 'express-session';
 
 dotenv.config();
 
-// Express server setup with session middleware
+// express server setup with session middleware
 const app = express();
 const port = 8000; // Same as the redirect_uri
 
 app.use(session({ secret: 'secret-key', resave: false, saveUninitialized: true }));
 
-// Generate random string
+// generate random string
 const generateRandomString = (length) => {
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const values = crypto.randomBytes(length);
@@ -39,12 +39,12 @@ const clientSecret = process.env.SPOTIFY_SECRET_KEY;
 const redirectUri = 'http://127.0.0.1:8000/callback'; // Make sure this matches your Spotify redirect URI
 const scope = 'user-read-private user-read-email';
 
-// Generate code_verifier and code_challenge
+// generate code_verifier and code_challenge
 const codeVerifier = generateRandomString(64);
 const hashed = sha256(codeVerifier);
 const codeChallenge = base64encode(hashed);
 
-// Store code_verifier in session
+// store code_verifier in session
 app.get('/login', (req, res) => {
   req.session.codeVerifier = codeVerifier;
   const authUrl = new URL("https://accounts.spotify.com/authorize");
