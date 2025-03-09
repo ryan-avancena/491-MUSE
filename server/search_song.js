@@ -1,8 +1,16 @@
-const { search } = require('./tunebat'); // Assuming tunebat.js is the file with the code
+/* search_song.js
+
+- this is the main file that's going to be used for the searching function in my application
+- it uses the tunebat api to search for songs and their features
+- the features are then displayed in the console
+
+*/
+
+const { search } = require('./tunebat'); 
 
 async function searchSong(query) {
     try {
-        // Search using the query
+        
         const results = await search(query);
         
         if (results.length > 0) {
@@ -40,6 +48,5 @@ async function searchSong(query) {
     }
 }
 
-// Example search query
 const query = "drake";
 r = searchSong(query);
