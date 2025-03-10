@@ -1,6 +1,6 @@
-const nid = require("node-id3");
-const simi = require("string-similarity");
-const path = require("path");
+import nid from 'node-id3';
+import simi from 'string-similarity';
+import path from 'path';
 
 const TuneBatVersion = 1;
 const TunebatScoreThreshold = 0.8;
@@ -10,18 +10,16 @@ const param = "term";
 let throttleProm = null;
 
 // Testing indicates that you can execute 15 rapid queries before being told to wait a minute.
-async function search(query) {
+export async function search(query) {
     query = encodeURI(query);
     let url = `${base}?${param}=${query}`;
-    console.log(`Fetching data from: ${url}`);
+    // console.log(`Fetching data from: ${url}`);
     
     let r = (await fetch(url));
     let t = await r.text();
     try {
         return JSON.parse(t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/’/g, "'")).data.items;
     } catch(e) {
-        // console.log(r.headers);
-        // console.log(t);
         if(r.headers.get("retry-after") !== null) {
             let count = parseInt(r.headers.get("retry-after")) + 5;
             if(throttleProm === null) {
@@ -43,15 +41,15 @@ async function search(query) {
     }
 }
 
-async function getID3Tags(file) {
+export async function getID3Tags(file) {
     return await nid.read(file);
 }
 
-async function updateID3Tags(file, tags) {
+export async function updateID3Tags(file, tags) {
     return await nid.update(tags, file);
 }
 
-async function shouldBeTunebatted(file) {
+export async function shouldBeTunebatted(file) {
     let tags = await getID3Tags(file);
     if(tags.userDefinedText === undefined) return true;
 
@@ -61,7 +59,7 @@ async function shouldBeTunebatted(file) {
     return true;
 }
 
-async function tunebat(file, match = null) {
+export async function tunebat(file, match = null) {
     let tags = await getID3Tags(file);
     let bestMatch = {el: null, score: 0};
     let results;
@@ -81,8 +79,6 @@ async function tunebat(file, match = null) {
 
         // Find the best match. If the title is empty, then there's no way of knowing for sure, and manual labour is required.
         if((tags.title ?? "") !== "") {
-            // loop through results and find the best match
-            // the best match is defined as the title being exactly equal and the artists array from res containing the artist in the ID3 tags
             bestMatch = results.reduce((best, curr) => {
                 if(tags.artist === "" || curr.as.find((a) => a.toLowerCase() === tags.artist.toLowerCase())) {
                     let score = simi.compareTwoStrings(curr.n, tags.title);
@@ -95,48 +91,15 @@ async function tunebat(file, match = null) {
         }
     }
 
-    /* Tunebat response:
-    {
-        id: "Spotify ID"
-        n: "Track Title"
-        as: ["Artists"]
-        l: ---
-        an: "Album"
-        rd: ---
-        is: ---
-        ie: ---
-        d: "Milliseconds"
-        p: --- ? "Popularity -1"
-        k: "Key"
-        kv: ---
-        c: "Camelot Key"
-        b: "BPM"
-        The below percents have a range of zero to one  inclusive (0 - 1)
-        ac: --- ? "Acousticness percent"
-        da: "Danceability percent"
-        e: "Energy percent"
-        h: "Happiness percent"
-        i: "Instrumentalness" (probably percent)
-        li: "Liveness percent"
-        lo: "Loudness dB"
-        s: "Speechiness percent" (does this mean signing vs speaking?)
-        ci: [{album covers}]
-        cr: ---
-        r: [---]
-        er: [---]
-    }
-    */
     if(match !== null || (bestMatch.el !== null && bestMatch.score >= TunebatScoreThreshold)) {
         bestMatch = match !== null ? match : bestMatch.el;
 
-        // TODO: Add "Cover" tags
         tags = {
             ...tags,
             album: bestMatch.an,
             artist: bestMatch.as[0],
             initialKey: bestMatch.c,
             userDefinedText: [
-                // They're stringed because ID3 doesn't support numbers
                 {description: "Tunebat Version", value: `${TuneBatVersion}`},
                 {description: "Spotify ID", value: `${bestMatch.id}`},
                 {description: "Acousticness", value: `${bestMatch.ac}`},
@@ -152,9 +115,6 @@ async function tunebat(file, match = null) {
         if(await updateID3Tags(file, tags)) return true;
         else throw new TuneBatError("Something bad happened?", file, tags.title, tags.artist, bestMatch.score);
     } else {
-        // // throw a tunebat error with the message as smth like "couldn't find a good match"
-        // throw new TuneBatError(`Couldn't find a good match`, file, tags.title, tags.artist, bestMatch.score);
-
         return {
             file,
             artist: tags.artist,
@@ -175,12 +135,3 @@ class TuneBatError extends Error {
         this.score = score;
     }
 }
-
-module.exports = {
-    search,
-    getID3Tags,
-    updateID3Tags,
-    tunebat,
-    shouldBeTunebatted,
-    TuneBatError
-};

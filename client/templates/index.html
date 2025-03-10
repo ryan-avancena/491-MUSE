@@ -8,26 +8,26 @@
 <body>
     <h1>Welcome to the Flask + Node.js Application</h1>
     <form id="data-form">
-        <label for="data">Enter data:</label>
+        <label for="data">Enter song query:</label>
         <input type="text" id="data" name="data" required>
         <button type="submit">Submit</button>
     </form>
 
     <h2>Result:</h2>
-    <pre id="result"></pre>
-
+    <div id="result"></div>
+<!--  -->
     <script>
         document.getElementById('data-form').addEventListener('submit', async function(event) {
             event.preventDefault();
             const data = document.getElementById('data').value;
-
+            
             try {
-                const response = await fetch('/process', {
-                    method: 'POST',
+                // Send the query to Flask backend
+                const response = await fetch('/search?query=' + encodeURIComponent(data), {
+                    method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ data: data })
                 });
 
                 const result = await response.json();
