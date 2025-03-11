@@ -15,7 +15,13 @@
     "body-parser": "^1.20.3",
     "csv-parser": "^3.2.0",
     "express": "^4.21.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "node-id3": "^0.2.8",
+    "path": "^0.12.7",
+    "qrcode": "^1.5.4",
+    "socket.io": "^4.8.1",
+    "string-similarity": "^4.0.4",
+    "uuid": "^11.1.0"
   },
   "type": "module"
 }

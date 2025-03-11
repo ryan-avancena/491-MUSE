@@ -6,7 +6,17 @@
     <title>Flask + Node.js App</title>
 </head>
 <body>
-    <h1>Welcome to the Flask + Node.js Application</h1>
+    <h1>MUSE Application</h1>
+
+    <h2>Create Room</h2>
+    <!-- Add Button to Trigger Room Creation -->
+    <button id="create-room-button">Create Room</button>
+    <div id="room-info">
+        <p id="room-id"></p>
+        <img id="qr-code" src="" alt="QR Code" style="display:none;">
+    </div>
+
+    <h2>Search for a Song</h2>
     <form id="data-form">
         <label for="data">Enter song query:</label>
         <input type="text" id="data" name="data" required>
@@ -15,8 +25,31 @@
 
     <h2>Result:</h2>
     <div id="result"></div>
-<!--  -->
+
     <script>
+        // Handle the Create Room button click
+        document.getElementById('create-room-button').addEventListener('click', async function() {
+            try {
+                // Make an API request to Flask to create a room
+                const response = await fetch('/create-room', { method: 'POST' });
+                
+                if (!response.ok) {
+                    throw new Error('Error creating room');
+                }
+
+                const data = await response.json();
+
+                // Display the room ID and QR code
+                document.getElementById('room-id').textContent = `Room ID: ${data.roomId}`;
+                const qrCodeImage = document.getElementById('qr-code');
+                qrCodeImage.src = data.qrCodeUrl;
+                qrCodeImage.style.display = 'block'; // Show the QR code
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        // Handle the Search Song form
         document.getElementById('data-form').addEventListener('submit', async function(event) {
             event.preventDefault();
             const data = document.getElementById('data').value;

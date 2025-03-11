@@ -1,8 +1,8 @@
-const express = require("express");
-const { createServer } = require("http");
-const { Server } = require("socket.io");
-const { v4: uuidv4 } = require("uuid");
-const QRCode = require("qrcode");
+import express from 'express';
+import { createServer } from 'http';
+import { Server } from 'socket.io';
+import { v4 as uuidv4 } from 'uuid';
+import QRCode from 'qrcode';
 
 const app = express();
 const server = createServer(app);
@@ -44,4 +44,4 @@ io.on("connection", (socket) => {
     });
 });
 
-server.listen(3001, () => console.log("Server running on port 3001"));
+server.listen(3000, () => console.log("Server running on port 3000"));

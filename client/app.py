@@ -1,5 +1,6 @@
 import subprocess
 import json
+import requests
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
@@ -8,6 +9,15 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/create-room', methods=['POST','GET'])
+def create_room():
+    try:
+        # Send POST request to Node.js server
+        response = requests.get("http://localhost:3000/create-room")  # Ensure Node.js is running on port 3000
+        return jsonify(response.json()), response.status_code
+    except requests.RequestException as e:
+        return jsonify({'error': 'Failed to reach Node.js server', 'details': str(e)}), 500
 
 @app.route('/search', methods=['GET'])
 def search_song():
