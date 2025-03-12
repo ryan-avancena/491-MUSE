@@ -77,6 +77,7 @@ async function searchSong(query, isFirstWrite = false) {
 
 async function searchAllArtists() {
     const RAP_ARTISTS = ["Drake", "Kendrick Lamar", "Future", "Tupac", "50 Cent"];
+    const EDM_ARTISTS = ["John Summit, Aviicii", "David Guetta", "Calvin Harris", "Martin Garrix", "Zedd", "knock2"];
 
     if (fs.existsSync(CSV_FILE)) {
         fs.unlinkSync(CSV_FILE);

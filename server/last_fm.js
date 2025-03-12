@@ -32,7 +32,7 @@ TRACK = encodeURIComponent(TRACK);
 // const similar_artist_url = `https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${ARTIST}&api_key=${LAST_FM_KEY}&format=json`;
 // const artist_tags_url = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist=${ARTIST}&api_key=${LAST_FM_KEY}&format=json`;
 // const similar_track_url = `https://ws.audioscrobbler.com/2.0/?method=track.getsimilar&artist=${ARTIST}&track=${TRACK}&api_key=${LAST_FM_KEY}&format=json`;
-const get_top_track_tags_url = `https://ws.audioscrobbler.com/2.0/?method=track.gettoptags&artist=${ARTIST}&track=${TRACK}&api_key=${LAST_FM_KEY}&format=json`;
+// const get_top_track_tags_url = `https://ws.audioscrobbler.com/2.0/?method=track.gettoptags&artist=${ARTIST}&track=${TRACK}&api_key=${LAST_FM_KEY}&format=json`;
 // const get_track_tags_url = `https://ws.audioscrobbler.com/2.0/?method=track.getTags&api_key=${LAST_FM_KEY}&artist=${ARTIST}&track=${TRACK}&user=RJ&format=json`;
 // const get_top_artist_with_tag = `https://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=${TAG}&api_key=${LAST_FM_KEY}&limit=${}&page=${}&format=json`;
 

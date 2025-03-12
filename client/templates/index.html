@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask + Node.js App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>MUSE</title>
 </head>
 <body>
     <h1>MUSE Application</h1>
@@ -15,6 +16,8 @@
         <p id="room-id"></p>
         <img id="qr-code" src="" alt="QR Code" style="display:none;">
     </div>
+
+    <hr>
 
     <h2>Search for a Song</h2>
     <form id="data-form">
@@ -49,13 +52,13 @@
             }
         });
 
-        // Handle the Search Song form
+        // searching the song
         document.getElementById('data-form').addEventListener('submit', async function(event) {
             event.preventDefault();
             const data = document.getElementById('data').value;
             
             try {
-                // Send the query to Flask backend
+                // send the query to Flask backend
                 const response = await fetch('/search?query=' + encodeURIComponent(data), {
                     method: 'GET',
                     headers: {
@@ -64,11 +67,48 @@
                 });
 
                 const result = await response.json();
-                document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+                console.log(result);
+                displayResult(result);
+                // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
             } catch (error) {
                 console.error('Error:', error);
             }
         });
+
+        function displayResult(result) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            result.slice(0, 5).forEach(song => { // Ensure only 5 results are displayed
+                const songDiv = document.createElement('div');
+                songDiv.classList.add('songDiv'); // Apply CSS class
+                songDiv.innerHTML = `
+                    <h3>${song.n}</h3>
+                    <p><strong>Artist(s):</strong> ${song.as.join(', ')}</p>
+                    <p><strong>Album:</strong> ${song.an}</p>
+                    <p><strong>Duration:</strong> ${(song.d / 1000).toFixed(2)} seconds</p>
+                    <img src="${song.ci[0].iu}" alt="Thumbnail" width="150">
+
+                    <h4>DJ Metrics:</h4>
+                    <ul>
+                    <p><strong>BPM:</strong> ${song.b} | <strong>Key:</strong> ${song.k} | <strong>Camelot:</strong> ${song.c}</p>
+                    <p><strong>Duration:</strong> ${song.d} | <strong>Release Date:</strong> ${song.rd}</p>
+                    <li><strong>Popularity:</strong> ${song.p}</li>
+                    <li><strong>Energy:</strong> ${song.e}</li>
+                    <li><strong>Danceability:</strong> ${song.da}</li>
+                    <li><strong>Happiness:</strong> ${song.h}</li>
+                    <li><strong>Instrumentalness:</strong> ${song.i}</li>
+                    <li><strong>Liveness:</strong> ${song.li}</li>
+                    <li><strong>Loudness:</strong> ${song.lo}</li>
+                    <li><strong>Speechiness:</strong> ${song.s}</li>
+                </ul>
+                `;
+
+                resultDiv.appendChild(songDiv);
+            });
+        }
+
+        
     </script>
 </body>
 </html>
