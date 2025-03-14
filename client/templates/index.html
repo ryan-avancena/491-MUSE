@@ -19,6 +19,21 @@
 
     <hr>
 
+    <h2>Authenticate Spotify</h2>
+    <p>Client ID: {{ client_id }}</p> <!-- Debugging: See the client_id -->
+    <a href="https://accounts.spotify.com/authorize?response_type=code&client_id={{ client_id }}&redirect_uri=http://127.0.0.1:5000/auth-spotify&scope=user-read-private user-read-email user-top-read">
+        <button>Login with Spotify</button>
+    </a>
+
+    <h2>Authenticated Users Top Tracks</h2>
+    <ul id="top-tracks-list"></ul>
+        {% for track in top_tracks %}
+            <li>{{ track.name }} by {{ track.artists[0].name }}</li>
+        {% endfor %}
+    <p></p>
+
+    <h2>Authenticated Users Top Artists</h2>
+
     <h2>Search for a Song</h2>
     <form id="data-form">
         <label for="data">Enter song query:</label>
@@ -30,7 +45,16 @@
     <div id="result"></div>
 
     <script>
-        // Handle the Create Room button click
+
+        /*
+        
+        create-room-button: Button to create a room
+        room-id: Paragraph to display the room ID
+        qr-code: Image to display the QR code
+        
+        main function is the create a room that users can join to submit songs
+
+        */
         document.getElementById('create-room-button').addEventListener('click', async function() {
             try {
                 // Make an API request to Flask to create a room

@@ -3,10 +3,15 @@ import crypto from 'crypto';
 import express from 'express';
 import fetch from 'node-fetch';
 import session from 'express-session';
-
+import { fileURLToPath } from 'url';
+import path from 'path';
 dotenv.config();
 
-// Express server setup with session middleware
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
 const app = express();
 const port = 8000; // Same as the redirect_uri
 
@@ -35,7 +40,10 @@ const base64encode = (input) => {
 }
 
 const clientId = process.env.SPOTIFY_CLIENT_ID;
-const clientSecret = process.env.SPOTIFY_SECRET_KEY;
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+
+console.log(clientId, clientSecret);
+
 const redirectUri = 'http://127.0.0.1:8000/callback'; // Make sure this matches your Spotify redirect URI
 const scope = 'user-read-private user-read-email';
 
