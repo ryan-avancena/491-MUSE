@@ -65,7 +65,6 @@ def auth_spotify():
         "Content-Type": "application/x-www-form-urlencoded"
     }
 
-    # Request to exchange the code for an access token
     response = requests.post(token_url, data=payload, headers=headers)
 
     if response.status_code != 200:
@@ -74,11 +73,9 @@ def auth_spotify():
     token_data = response.json()
     access_token = token_data.get("access_token")
     
-    # Store access token in session
     session["spotify_token"] = access_token
 
-    # Fetch user's top tracks
-    top_tracks_url = "https://api.spotify.com/v1/me/top/tracks"
+    top_tracks_url = "https://api.spotify.com/v1/me/top/tracks?time_range=short_term"
     top_tracks_headers = {"Authorization": f"Bearer {access_token}"}
     top_tracks_response = requests.get(top_tracks_url, headers=top_tracks_headers)
 
