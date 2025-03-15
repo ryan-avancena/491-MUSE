@@ -2,15 +2,18 @@ import subprocess
 import json
 import requests
 from flask import Flask, render_template, request, jsonify, session
+from flask_socketio import SocketIO
+import threading
+import time
 import os
 from dotenv import load_dotenv
+from render_audio import audio_recording
 
 app = Flask(__name__)
 app.secret_key = "hi"
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '../server/.env')
-
-# Load the .env file
 load_dotenv(dotenv_path)
 
 SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
@@ -19,11 +22,25 @@ REDIRECT_URI = 'http://127.0.0.1:5000/auth-spotify'  # Flask redirect URI
 
 print(SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET)
 
-# Homepage route
+
+# Start the audio recording in a background thread
+def start_audio():
+    audio_recording(socketio)
+
+threading.Thread(target=start_audio, daemon=True).start()
+""" 
+The main route of the app. 
+Serves the index.html file with the Spotify client ID. 
+"""
+
 @app.route('/')
 def index():
     return render_template('index.html', client_id=SPOTIFY_CLIENT_ID)
 
+
+""" 
+Authenticates the user with Spotify and fetches their top tracks.
+"""
 
 @app.route('/auth-spotify')
 def auth_spotify():
@@ -73,41 +90,26 @@ def auth_spotify():
     return render_template("index.html", top_tracks=top_tracks_data["items"], client_id=SPOTIFY_CLIENT_ID)
 
 
-@app.route('/top-tracks')
-def get_top_tracks():
-    access_token = session.get('spotify_access_token')  # Retrieve token from session
-    
-    if not access_token:
-        return jsonify({"error": "No access token found. Authenticate first."}), 401
-
-    url = "https://api.spotify.com/v1/me/top/tracks"
-    headers = {
-        "Authorization": f"Bearer {access_token}"
-    }
-
-    response = requests.get(url, headers=headers)
-
-    if response.status_code != 200:
-        return jsonify({"error": "Failed to fetch top tracks", "details": response.json()}), 400
-
-    return jsonify(response.json())  # Return top tracks data
-
+""" 
+Creates a new room on the Node.js server and returns the room ID.
+"""
 
 @app.route('/create-room', methods=['POST','GET'])
 def create_room():
     try:
-        # Send POST request to Node.js server
-        response = requests.get("http://localhost:3000/create-room")  # Ensure Node.js is running on port 3000
+        response = requests.get("http://localhost:3000/create-room")  
         return jsonify(response.json()), response.status_code
     except requests.RequestException as e:
         return jsonify({'error': 'Failed to reach Node.js server', 'details': str(e)}), 500
 
+
+""" 
+Search for a song and returns song detalils.
+"""
 @app.route('/search', methods=['GET'])
 def search_song():
     try:
-        query = request.args.get('query')  # Get the query parameter from the URL
-
-        # Run your Node.js script and capture the result
+        query = request.args.get('query')  
         result = subprocess.run(['node', '../server/search_song.js', query], capture_output=True, text=True)
         
         print("Raw Node.js stdout:", repr(result.stdout))
@@ -116,10 +118,9 @@ def search_song():
         if result.returncode != 0:
             return jsonify({'error': 'Error executing search', 'details': result.stderr}), 500
         
-        # Try to parse the JSON output from Node.js
         try:
-            output = json.loads(result.stdout)  # Parse the JSON output
-            return jsonify(output)  # Return as valid Flask response (JSON)
+            output = json.loads(result.stdout) 
+            return jsonify(output) 
         except json.JSONDecodeError as e:
             return jsonify({'error': 'Invalid JSON returned from Node.js', 'details': str(e)}), 500
 
@@ -128,4 +129,5 @@ def search_song():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    socketio.run(app, debug=True, host='0.0.0.0', port=5000)
+

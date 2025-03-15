@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <title>MUSE</title>
 </head>
 <body>
     <h1>MUSE Application</h1>
+
+    <h2>Real-Time Audio Volume</h2>
+    <p>Volume: <span id="volume">Waiting...</span> dB</p>
+
 
     <h2>Create Room</h2>
     <!-- Add Button to Trigger Room Creation -->
@@ -45,6 +50,10 @@
     <div id="result"></div>
 
     <script>
+        var socket = io();
+        socket.on('audio_data', function(data) {
+            document.getElementById('volume').innerText = data.volume.toFixed(2);
+        });
 
         /*
         
