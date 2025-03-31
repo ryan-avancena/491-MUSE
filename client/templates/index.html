@@ -15,12 +15,15 @@
 
 
     <h2>Create Room</h2>
-    <!-- Add Button to Trigger Room Creation -->
+    <input type="text" id="host-id-input" placeholder="Enter Host ID">
     <button id="create-room-button">Create Room</button>
-    <div id="room-info">
-        <p id="room-id"></p>
-        <img id="qr-code" src="" alt="QR Code" style="display:none;">
-    </div>
+    <p id="room-info"></p>
+
+    
+    <h2>Join Room</h2>
+    <input type="text" id="room-id-input" placeholder="Enter Room ID" />
+    <input type="text" id="user-id-input" placeholder="Enter Your User ID" />
+    <button id="join-room-button">Join Room</button>
 
     <hr>
 
@@ -46,6 +49,7 @@
         <button type="submit">Submit</button>
     </form>
 
+
     <h2>Result:</h2>
     <div id="result"></div>
 
@@ -64,26 +68,56 @@
         main function is the create a room that users can join to submit songs
 
         */
-        document.getElementById('create-room-button').addEventListener('click', async function() {
+        document.getElementById("create-room-button").addEventListener("click", async () => {
+            const hostId = document.getElementById("host-id-input").value.trim();
+            if (!hostId) {
+                alert("Please enter a host ID");
+                return;
+            }
+        
             try {
-                // Make an API request to Flask to create a room
-                const response = await fetch('/create-room', { method: 'POST' });
-                
-                if (!response.ok) {
-                    throw new Error('Error creating room');
-                }
-
+                const response = await fetch("http://localhost:3000/create-room", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ host_id: hostId })
+                });
+        
                 const data = await response.json();
-
-                // Display the room ID and QR code
-                document.getElementById('room-id').textContent = `Room ID: ${data.roomId}`;
-                const qrCodeImage = document.getElementById('qr-code');
-                qrCodeImage.src = data.qrCodeUrl;
-                qrCodeImage.style.display = 'block'; // Show the QR code
+                if (response.ok) {
+                    document.getElementById("room-info").innerText = `Room Created! ID: ${data.room_id}, Host: ${data.host_id}`;
+                } else {
+                    alert(data.error);
+                }
             } catch (error) {
-                console.error('Error:', error);
+                console.error("Error creating room:", error);
+                alert("Failed to create room.");
             }
         });
+
+        document.getElementById("join-room-button").addEventListener("click", async () => {
+            const roomId = document.getElementById("room-id-input").value;
+            const userId = document.getElementById("user-id-input").value;
+        
+            if (!roomId || !userId) {
+                alert("Please enter both Room ID and User ID");
+                return;
+            }
+        
+            try {
+                const response = await fetch("http://localhost:3000/join-room", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ room_id: roomId, user_id: userId }),
+                });
+        
+                const data = await response.json();
+                alert(data.status || data.error);
+            } catch (error) {
+                console.error("Error joining room:", error);
+                alert("Failed to join the room.");
+            }
+        });
+
 
         // searching the song
         document.getElementById('data-form').addEventListener('submit', async function(event) {
