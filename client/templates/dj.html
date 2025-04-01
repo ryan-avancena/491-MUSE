@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <title>MUSE</title>
+</head>
+<body>
+    <h1>MUSE Application</h1>
+
+    <h2>Real-Time Audio Volume</h2>
+    <p>Volume: <span id="volume">Waiting...</span> dB</p>
+
+    <h2>Create Room</h2>
+    <input type="text" id="host-id-input" placeholder="Enter Host ID">
+    <button id="create-room-button">Create Room</button>
+    <p id="room-info"></p>
+
+    <h2>Join Room as DJ</h2>
+    <input type="text" id="room-id-input" placeholder="Enter Room ID">
+    <button id="join-room-button">Join Room</button>
+    <button id="leave-room-button">Leave Room</button>
+
+    <h2>Song Requests</h2>
+    <ul id="song-requests"></ul>
+
+    <h2>Search for a Song</h2>
+    <form id="data-form">
+        <label for="data">Enter song query:</label>
+        <input type="text" id="data" name="data" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        var socket = io.connect("http://localhost:5000");
+        var currentRoom = null;
+
+        socket.on('audio_data', function(data) {
+            document.getElementById('volume').innerText = data.volume.toFixed(2);
+        });
+
+        /*
+        
+        create-room-button: Button to create a room
+        room-id: Paragraph to display the room ID
+        qr-code: Image to display the QR code
+        
+        main function is the create a room that users can join to submit songs
+
+        */
+
+        document.getElementById("join-room-button").addEventListener("click", function () {
+            const roomId = document.getElementById("room-id-input").value;
+            
+            if (!roomId) {
+                alert("Enter Room ID");
+                return;
+            }
+
+            socket.emit("join", { room_id: roomId, user_id: "DJ" });
+            currentRoom = roomId;
+            alert(`DJ joined room ${roomId}`);
+        });
+
+        document.getElementById("leave-room-button").addEventListener("click", function () {
+            if (!currentRoom) {
+                alert("You're not in any room!");
+                return;
+            }
+    
+            socket.emit("leave", { room_id: currentRoom, user_id: "DJ" });
+            alert(`DJ left room ${currentRoom}`);
+            currentRoom = null;
+        });
+
+        socket.on("message", function (data) {
+            const requestList = document.getElementById("song-requests");
+            const listItem = document.createElement("li");
+            listItem.textContent = data.msg;
+            requestList.appendChild(listItem);
+        });
+
+        document.getElementById("create-room-button").addEventListener("click", async () => {
+            const hostId = document.getElementById("host-id-input").value.trim();
+            if (!hostId) {
+                alert("Please enter a host ID");
+                return;
+            }
+        
+            try {
+                const response = await fetch("http://localhost:3000/create-room", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ host_id: hostId })
+                });
+        
+                const data = await response.json();
+                if (response.ok) {
+                    document.getElementById("room-info").innerText = `Room Created! ID: ${data.room_id}, Host: ${data.host_id}`;
+                } else {
+                    alert(data.error);
+                }
+            } catch (error) {
+                console.error("Error creating room:", error);
+                alert("Failed to create room.");
+            }
+        });
+
+        document.getElementById('data-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const data = document.getElementById('data').value;
+            
+            try {
+                // send the query to Flask backend
+                const response = await fetch('/search?query=' + encodeURIComponent(data), {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                const result = await response.json();
+                console.log(result);
+                displayResult(result);
+                // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+
+        function displayResult(result) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            result.slice(0, 5).forEach(song => { // Ensure only 5 results are displayed
+                const songDiv = document.createElement('div');
+                songDiv.classList.add('songDiv'); // Apply CSS class
+                songDiv.innerHTML = `
+                    <h3>${song.n}</h3>
+                    <p><strong>Artist(s):</strong> ${song.as.join(', ')}</p>
+                    <p><strong>Album:</strong> ${song.an}</p>
+                    <p><strong>Duration:</strong> ${(song.d / 1000).toFixed(2)} seconds</p>
+                    <img src="${song.ci[0].iu}" alt="Thumbnail" width="150">
+
+                    <h4>DJ Metrics:</h4>
+                    <ul>
+                    <p><strong>BPM:</strong> ${song.b} | <strong>Key:</strong> ${song.k} | <strong>Camelot:</strong> ${song.c}</p>
+                    <p><strong>Duration:</strong> ${song.d} | <strong>Release Date:</strong> ${song.rd}</p>
+                    <li><strong>Popularity:</strong> ${song.p}</li>
+                    <li><strong>Energy:</strong> ${song.e}</li>
+                    <li><strong>Danceability:</strong> ${song.da}</li>
+                    <li><strong>Happiness:</strong> ${song.h}</li>
+                    <li><strong>Instrumentalness:</strong> ${song.i}</li>
+                    <li><strong>Liveness:</strong> ${song.li}</li>
+                    <li><strong>Loudness:</strong> ${song.lo}</li>
+                    <li><strong>Speechiness:</strong> ${song.s}</li>
+                </ul>
+                `;
+
+                resultDiv.appendChild(songDiv);
+            });
+        }
+    </script>

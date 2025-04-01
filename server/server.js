@@ -23,6 +23,15 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/templates/index.html'));
 });
 
+app.get('/dj', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/templates/dj.html'));
+});
+
+app.get('/user', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/templates/user.html'));
+});
+
+
 app.post('/create-room', async (req, res) => {
   try {
       const { host_id } = req.body;

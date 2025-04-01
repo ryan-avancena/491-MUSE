@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <title>MUSE</title>
+</head>
+<body>
+    <h2>Join Room</h2>
+    <input type="text" id="room-id-input" placeholder="Enter Room ID" />
+    <input type="text" id="user-id-input" placeholder="Enter Your User ID" />
+    <button id="join-room-button">Join Room</button>
+    <button id="leave-room-button">Leave Room</button>
+    <hr>
+
+    <h2>Song Request</h2>
+    <input type="text" id="song-input" placeholder="Enter song name">
+    <button id="send-song-button">Request Song</button>
+
+    <hr>
+
+
+    <h2>Authenticate Spotify</h2>
+    <p>Client ID: {{ client_id }}</p> 
+    <a href="https://accounts.spotify.com/authorize?response_type=code&client_id={{ client_id }}&redirect_uri=http://127.0.0.1:5000/auth-spotify&scope=user-read-private user-read-email user-top-read">
+        <button>Login with Spotify</button>
+    </a>
+
+    <h2>Authenticated Users Top Tracks</h2>
+    <ul id="top-tracks-list"></ul>
+        {% for track in top_tracks %}
+            <li>{{ track.name }} by {{ track.artists[0].name }}</li>
+        {% endfor %}
+    <p></p>
+
+    <h2>Authenticated Users Top Artists</h2>
+
+    <script>
+        var socket = io.connect("http://localhost:5000");
+        var currentRoom = null;
+
+        document.getElementById("join-room-button").addEventListener("click", function () {
+            const roomId = document.getElementById("room-id-input").value;
+            const userId = document.getElementById("user-id-input").value;
+            
+            if (!roomId || !userId) {
+                alert("Enter Room ID and User ID");
+                return;
+            }
+
+            socket.emit("join", { room_id: roomId, user_id: userId });
+            currentRoom = roomId;
+            alert(`Joined room ${roomId}`);
+        });
+
+        document.getElementById("leave-room-button").addEventListener("click", function () {
+            if (!currentRoom) {
+                alert("You're not in any room!");
+                return;
+            }
+    
+            const userId = document.getElementById("user-id-input").value;
+            socket.emit("leave", { room_id: currentRoom, user_id: userId });
+            alert(`Left room ${currentRoom}`);
+            currentRoom = null;
+        });
+    </script>
+</body>
+</html>
