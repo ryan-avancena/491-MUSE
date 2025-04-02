@@ -80,7 +80,7 @@ const processSongs = async () => {
 
                 const tags = await fetchTags(artist, track);
 
-                csvRows.push(`${id},${artist},${track},"${tags}"`);
+                csvRows.push(`${id},${artist},"${track}","${tags}"`);
             }
         }
 
