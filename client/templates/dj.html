@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <title>MUSE</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        #recommendationsTable {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>MUSE Application</h1>
@@ -23,6 +44,46 @@
     <button id="join-room-button">Join Room</button>
     <button id="leave-room-button">Leave Room</button>
 
+    <hr>
+
+    <label for="trackSelect">Choose a song:</label>
+    <select id="trackSelect">
+        <option value="">Select a track</option>
+        {% for track in tracks %}
+        <option value="{{ track.ID }}">{{ track.Title }}</option>
+        {% endfor %}
+    </select>
+
+    <button onclick="getRecommendations()">Get Recommendations</button>
+
+    <h3>All Tracks</h3>
+    <table id="tracksTable" class="display">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Key</th>
+                <th>BPM</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for track in tracks %}
+            <tr>
+                <td>{{ track.Title }}</td>
+                <td>{{ track.Artist }}</td>
+                <td>{{ track.Album }}</td>
+                <td>{{ track.Key }}</td>
+                <td>{{ track.BPM }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="recommendations"></div>
+
+    <hr>
+
     <h2>Song Requests</h2>
     <ul id="song-requests"></ul>
 
@@ -39,6 +100,10 @@
     <script>
         var socket = io.connect("http://localhost:5000");
         var currentRoom = null;
+
+        $(document).ready(function() {
+            $('#tracksTable').DataTable();
+        });
 
         socket.on('audio_data', function(data) {
             document.getElementById('volume').innerText = data.volume.toFixed(2);
@@ -164,5 +229,59 @@
 
                 resultDiv.appendChild(songDiv);
             });
+        }
+
+        async function getRecommendations() {
+            let songId = document.getElementById("trackSelect").value;
+            
+            if (!songId) {
+                alert("Please select a song!");
+                return;
+            }
+
+            console.log(songId)
+
+            const response = await fetch(`/recommend?song_id=${songId}&top_k=5`);
+            const data = await response.json();
+
+            console.log(data)
+
+            let recommendationsDiv = document.getElementById("recommendations");
+            recommendationsDiv.innerHTML = "<h3>Recommended Tracks</h3>";
+
+            if (data.error) {
+                recommendationsDiv.innerHTML += `<p style="color: red;">${data.error}</p>`;
+                return;
+            }
+
+            let table = `<table id="recommendationsTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Album</th>
+                        <th>Key</th>
+                        <th>BPM</th>
+                        <th>Distance</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            data.forEach(track => {
+                table += `<tr>
+                            <td>${track.Title}</td>
+                            <td>${track.Artist}</td>
+                            <td>${track.Album}</td>
+                            <td>${track.Key}</td>
+                            <td>${track.BPM}</td>
+                            <td>${track.Distance.toFixed(2)}</td>
+                            </tr>`;
+            });
+
+            table += `</tbody></table>`;
+
+            recommendationsDiv.innerHTML += table;
+
+            $('#recommendationsTable').DataTable();
         }
     </script>

@@ -5,11 +5,13 @@ from dotenv import load_dotenv
 from google.cloud import firestore
 import threading
 from render_audio import audio_recording
+import pandas as pd 
 
-# Import Blueprints
+# blueprints
 from routes.auth import auth_bp
 from routes.room import room_bp
 from routes.search import search_bp
+from routes.vector_db import vector_db_bp
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -30,6 +32,7 @@ threading.Thread(target=start_audio, daemon=True).start()
 app.register_blueprint(auth_bp)
 app.register_blueprint(room_bp)
 app.register_blueprint(search_bp)
+app.register_blueprint(vector_db_bp)
 
 @app.route('/')
 def index():
@@ -37,7 +40,9 @@ def index():
 
 @app.route('/dj')
 def dj():
-    return render_template('dj.html')
+    df = pd.read_csv('../data/merged_tracks.csv')
+    tracks = df[["ID", "Title"]].to_dict(orient="records")
+    return render_template('dj.html',tracks=tracks)
 
 @app.route('/user')
 def user():
