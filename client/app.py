@@ -36,7 +36,7 @@ app.register_blueprint(vector_db_bp)
 
 @app.route('/')
 def index():
-    return render_template('index.html', client_id=SPOTIFY_CLIENT_ID)
+    return render_template('index.html')
 
 @app.route('/dj')
 def dj():
@@ -46,7 +46,7 @@ def dj():
 
 @app.route('/user')
 def user():
-    return render_template('user.html')
+    return render_template('user.html', client_id=SPOTIFY_CLIENT_ID)
 
 @socketio.on('join')
 def handle_join(data):

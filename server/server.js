@@ -5,12 +5,16 @@ import { search } from '../server/tunebat.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
+
+console.log(process.env.SPOTIFY_CLIENT_ID)
 
 app.use(express.json());
 app.use(cors({ origin: '*' })); 

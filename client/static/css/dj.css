@@ -1,0 +1,17 @@
+.songDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#volume-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #3498db;
+    margin: 20px auto;
+    transition: transform 0.1s ease-out;
+}
