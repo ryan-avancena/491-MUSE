@@ -8,10 +8,13 @@
 }
 
 #volume-circle {
-    width: 100px;
-    height: 100px;
+    width: 25vw;
+    height: 25vw;
+    justify-content: center;
+    display: flex;
+    background-color: crimson;
     border-radius: 50%;
-    background-color: #3498db;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     margin: 20px auto;
-    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }

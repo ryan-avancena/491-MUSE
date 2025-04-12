@@ -33,6 +33,7 @@
 
     <h2>Real-Time Audio Volume</h2>
     <p>Volume: <span id="volume">Waiting...</span> dB</p>
+    <div id="volume-circle"></div>
 
     <h2>Create Room</h2>
     <input type="text" id="host-id-input" placeholder="Enter Host ID">
@@ -106,7 +107,18 @@
         });
 
         socket.on('audio_data', function(data) {
-            document.getElementById('volume').innerText = data.volume.toFixed(2);
+            const volumeDisplay = document.getElementById('volume');
+            const sphere = document.getElementById('volume-circle');
+
+            const volume = data.volume;
+            volumeDisplay.innerText = volume.toFixed(2);
+
+            const scale = Math.min(Math.max(volume / 50, 1), 2);
+            sphere.style.transform = `scale(${scale})`;
+
+            const glow = Math.min(volume * 2, 100); // adjust as needed
+            sphere.style.boxShadow = `0 0 ${glow}px rgba(255, 0, 0, 0.6)`;
+
         });
 
         /*
