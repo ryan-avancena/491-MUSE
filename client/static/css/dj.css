@@ -1,3 +1,104 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* GLOW TEXT HEADING */
+#glow-text {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+
+/* RECOMMENDATION SECTION*/
+
+table.dataTable {
+    width: 50vw !important;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    border-color: #7D7D7D;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #FFEB53;
+    color: black;
+}
+
+#recommendationsTable {
+    margin-top: 20px;
+}
+
+
+
+.recommendation-section {
+    /* display: flex; */
+    width: 50vw;
+    align-items: center;    /* Vertically center the items */
+    justify-content: center; /* Center the items horizontally */
+    flex-direction: row;     /* Place the select and button on the same line */
+    border-radius: 30px;
+    border: solid 2px #7D7D7D; /* Fix the spacing around the '2px' */
+    gap: 10px;               /* Optional: Add space between the select and button */
+    padding: 1rem;
+}
+
+
+#trackSelect {
+    margin: 1vh;
+    width: 20vw;
+    font-size: 1rem;
+
+    border-radius: 30px;
+}
+
+.recommendation-section > label {
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.recommendation-section select {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.recommendation-section select option {
+    background-color: black;
+    color: white;
+    flex: 1;
+}
+
+.recommendation-section > button {
+    width: 12vw;
+    height: 6vh;
+    border-radius: 30px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+
+/* SEARCH SONG SECTION */
 .songDiv {
     display: flex;
     justify-content: space-between;
@@ -5,16 +106,4 @@
     margin: 10px;
     padding: 10px;
     border: 1px solid black;
-}
-
-#volume-circle {
-    width: 25vw;
-    height: 25vw;
-    justify-content: center;
-    display: flex;
-    background-color: crimson;
-    border-radius: 50%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
 }

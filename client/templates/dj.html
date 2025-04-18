@@ -9,90 +9,60 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <title>MUSE</title>
-
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        #recommendationsTable {
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
-    <h1>MUSE Application</h1>
-
-    <h2>Real-Time Audio Volume</h2>
-    <p>Volume: <span id="volume">Waiting...</span> dB</p>
-    <div id="volume-circle"></div>
-
-    <h2>Create Room</h2>
-    <input type="text" id="host-id-input" placeholder="Enter Host ID">
-    <button id="create-room-button">Create Room</button>
-    <p id="room-info"></p>
-
-    <h2>Join Room as DJ</h2>
-    <input type="text" id="room-id-input" placeholder="Enter Room ID">
-    <button id="join-room-button">Join Room</button>
-    <button id="leave-room-button">Leave Room</button>
-
-    <hr>
-
-    <label for="trackSelect">Choose a song:</label>
-    <select id="trackSelect">
-        <option value="">Select a track</option>
-        {% for track in tracks %}
-        <option value="{{ track.ID }}">{{ track.Title }}</option>
-        {% endfor %}
-    </select>
-
-    <button onclick="getRecommendations()">Get Recommendations</button>
-
-    <h3>All Tracks</h3>
-    <table id="tracksTable" class="display">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Album</th>
-                <th>Key</th>
-                <th>BPM</th>
-            </tr>
-        </thead>
-        <tbody>
+    <h1 id="glow-text">MUSE</h1>
+    <div class="recommendation-section">
+        <!-- <label for="trackSelect">choose a song:</label> -->
+        <select id="trackSelect">
+            <option value="">select a track</option>
             {% for track in tracks %}
-            <tr>
-                <td>{{ track.Title }}</td>
-                <td>{{ track.Artist }}</td>
-                <td>{{ track.Album }}</td>
-                <td>{{ track.Key }}</td>
-                <td>{{ track.BPM }}</td>
-            </tr>
+            <option value="{{ track.ID }}">{{ track.Title }}</option>
             {% endfor %}
-        </tbody>
-    </table>
+        </select>
 
-    <div id="recommendations"></div>
+        <button onclick="getRecommendations()">get recommendations</button>
+
+        <h3>current set</h3>
+        <table id="tracksTable" class="display">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th>Key</th>
+                    <th>BPM</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for track in tracks %}
+                <tr>
+                    <td>{{ track.Title }}</td>
+                    <td>{{ track.Artist }}</td>
+                    <td>{{ track.Album }}</td>
+                    <td>{{ track.Key }}</td>
+                    <td>{{ track.BPM }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div id="recommendations"></div>
+
+    </div>
 
     <hr>
 
     <h2>Song Requests</h2>
     <ul id="song-requests"></ul>
 
-    <h2>Search for a Song</h2>
+    <hr>
+
+    <h2>search</h2>
     <form id="data-form">
-        <label for="data">Enter song query:</label>
+        <!-- <label for="data">enter a song ...</label> -->
         <input type="text" id="data" name="data" required>
-        <button type="submit">Submit</button>
+        <button type="submit">search</button>
     </form>
 
     <h2>Result:</h2>
@@ -107,19 +77,21 @@
         });
 
         socket.on('audio_data', function(data) {
-            const volumeDisplay = document.getElementById('volume');
-            const sphere = document.getElementById('volume-circle');
-
+            const glowText = document.getElementById('glow-text');
             const volume = data.volume;
-            volumeDisplay.innerText = volume.toFixed(2);
 
-            const scale = Math.min(Math.max(volume / 50, 1), 2);
-            sphere.style.transform = `scale(${scale})`;
+            const normalized = Math.min(Math.max((volume + 50) / 50, 0), 1);
+            // const hue = normalized * 360;
+            const glowStrength = normalized * 3;
+            const hue = 55; // yellow hue
 
-            const glow = Math.min(volume * 2, 100); // adjust as needed
-            sphere.style.boxShadow = `0 0 ${glow}px rgba(255, 0, 0, 0.6)`;
-
+            glowText.style.color = `hsl(${hue}, 100%, 70%)`;
+            glowText.style.textShadow = `
+                0 0 ${glowStrength}px hsl(${hue}, 100%, 70%),
+                0 0 ${glowStrength * 0.5}px hsl(${hue}, 100%, 50%)
+            `;
         });
+
 
         /*
         
@@ -131,67 +103,67 @@
 
         */
 
-        document.getElementById("join-room-button").addEventListener("click", function () {
-            const roomId = document.getElementById("room-id-input").value;
+        // document.getElementById("join-room-button").addEventListener("click", function () {
+        //     const roomId = document.getElementById("room-id-input").value;
             
-            if (!roomId) {
-                alert("Enter Room ID");
-                return;
-            }
+        //     if (!roomId) {
+        //         alert("Enter Room ID");
+        //         return;
+        //     }
 
-            socket.emit("join", { room_id: roomId, user_id: "DJ" });
-            currentRoom = roomId;
-            alert(`DJ joined room ${roomId}`);
-        });
+        //     socket.emit("join", { room_id: roomId, user_id: "DJ" });
+        //     currentRoom = roomId;
+        //     alert(`DJ joined room ${roomId}`);
+        // });
 
-        document.getElementById("leave-room-button").addEventListener("click", function () {
-            if (!currentRoom) {
-                alert("You're not in any room!");
-                return;
-            }
+        // document.getElementById("leave-room-button").addEventListener("click", function () {
+        //     if (!currentRoom) {
+        //         alert("You're not in any room!");
+        //         return;
+        //     }
     
-            socket.emit("leave", { room_id: currentRoom, user_id: "DJ" });
-            alert(`DJ left room ${currentRoom}`);
-            currentRoom = null;
-        });
+        //     socket.emit("leave", { room_id: currentRoom, user_id: "DJ" });
+        //     alert(`DJ left room ${currentRoom}`);
+        //     currentRoom = null;
+        // });
 
-        socket.on("message", function (data) {
-            const requestList = document.getElementById("song-requests");
-            const listItem = document.createElement("li");
-            listItem.textContent = data.msg;
-            requestList.appendChild(listItem);
-        });
+        // socket.on("message", function (data) {
+        //     const requestList = document.getElementById("song-requests");
+        //     const listItem = document.createElement("li");
+        //     listItem.textContent = data.msg;
+        //     requestList.appendChild(listItem);
+        // });
 
-        document.getElementById("create-room-button").addEventListener("click", async () => {
-            const hostId = document.getElementById("host-id-input").value.trim();
-            if (!hostId) {
-                alert("Please enter a host ID");
-                return;
-            }
+        // document.getElementById("create-room-button").addEventListener("click", async () => {
+        //     const hostId = document.getElementById("host-id-input").value.trim();
+        //     if (!hostId) {
+        //         alert("Please enter a host ID");
+        //         return;
+        //     }
         
-            try {
-                const response = await fetch("http://localhost:3000/create-room", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ host_id: hostId })
-                });
+        //     try {
+        //         const response = await fetch("http://localhost:3000/create-room", {
+        //             method: "POST",
+        //             headers: { "Content-Type": "application/json" },
+        //             body: JSON.stringify({ host_id: hostId })
+        //         });
         
-                const data = await response.json();
-                if (response.ok) {
-                    document.getElementById("room-info").innerText = `Room Created! ID: ${data.room_id}, Host: ${data.host_id}`;
-                } else {
-                    alert(data.error);
-                }
-            } catch (error) {
-                console.error("Error creating room:", error);
-                alert("Failed to create room.");
-            }
-        });
+        //         const data = await response.json();
+        //         if (response.ok) {
+        //             document.getElementById("room-info").innerText = `Room Created! ID: ${data.room_id}, Host: ${data.host_id}`;
+        //         } else {
+        //             alert(data.error);
+        //         }
+        //     } catch (error) {
+        //         console.error("Error creating room:", error);
+        //         alert("Failed to create room.");
+        //     }
+        // });
 
         document.getElementById('data-form').addEventListener('submit', async function(event) {
-            event.preventDefault();
+            event.preventDefault(); // ✅ Add this!
             const data = document.getElementById('data').value;
-            
+            console.log("Query:", data);
             try {
                 // send the query to Flask backend
                 const response = await fetch('/search?query=' + encodeURIComponent(data), {
