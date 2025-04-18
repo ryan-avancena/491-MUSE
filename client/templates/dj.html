@@ -7,59 +7,66 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/recommend.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/visualizer.js') }}"></script>
     <title>MUSE</title>
 </head>
 <body>
     <h1 id="glow-text">MUSE</h1>
 
+    <div id="visualizer" style="width:50%; height:500px; margin-top: 30px;"></div>
+
     <div class="recommendation-section">
-        <!-- <label for="trackSelect">choose a song:</label> -->
-        <select id="trackSelect">
-            <option value="">select a track</option>
-            {% for track in tracks %}
-            <option value="{{ track.ID }}">{{ track.Title }}</option>
-            {% endfor %}
-        </select>
+        <div class="controls">
+            <div id="tracksTable_filter" style="width:100%" class="dataTables_filter">
+                <!-- This is the built-in search bar of DataTables -->
+            </div>
+        </div>
+        
 
-        <button onclick="getRecommendations()">get recommendations</button>
-
-        <h3>current set</h3>
-        <table id="tracksTable" class="display">
-            <thead>
-                <tr>
-                    <th>title</th>
-                    <th>artist</th>
-                    <th>key</th>
-                    <th>bpm</th>
-                    <th>tags</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for track in tracks %}
-                <tr>
-                    <td>{{ track.Title }}</td>
-                    <td>{{ track.Artist }}</td>
-                    <td>{{ track.Key }}</td>
-                    <td>{{ track.BPM }}</td>
-                    <td>{{ track.Tags}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-
-        <div id="recommendations"></div>
-
+        <div class="table-section-container">
+            <!-- Main table (tracks table) -->
+            <div class="table-section">
+                <table id="tracksTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Artist</th>
+                            <th>Key</th>
+                            <th>BPM</th>
+                            <th>Tags</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for track in tracks %}
+                        <tr data-id="{{ track.ID }}">
+                            <td>{{ track.Title }}</td>
+                            <td>{{ track.Artist }}</td>
+                            <td>{{ track.Key }}</td>
+                            <td>{{ track.BPM }}</td>
+                            <td>{{ track.Tags }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Recommendations table -->
+            <!-- <div id="recommendations" class="table-section"></div> -->
+        </div>
     </div>
 
     <hr>
 
-    <div class="requests-section">
+    <!-- <div class="requests-section">
         <h2>Song Requests</h2>
         <ul id="song-requests"></ul>
-    </div>
-
-    <hr>
+    </div> -->
 
     <h2>search</h2>
     <form id="data-form">
@@ -69,206 +76,4 @@
 
     <h2>Result:</h2>
     <div id="result"></div>
-
-    <script>
-        var socket = io.connect("http://localhost:5000");
-        var currentRoom = null;
-
-        $(document).ready(function() {
-            $('#tracksTable').DataTable();
-        });
-
-        socket.on('audio_data', function(data) {
-            const glowText = document.getElementById('glow-text');
-            const volume = data.volume;
-
-            const normalized = Math.min(Math.max((volume + 50) / 50, 0), 1);
-            // const hue = normalized * 360;
-            const glowStrength = normalized * 8;
-            const hue = 55; // yellow hue
-
-            glowText.style.color = `hsl(${hue}, 100%, 70%)`;
-            glowText.style.textShadow = `
-                0 0 ${glowStrength}px hsl(${hue}, 100%, 70%),
-                0 0 ${glowStrength * 0.5}px hsl(${hue}, 100%, 50%)
-            `;
-        });
-
-
-        /*
-        
-        create-room-button: Button to create a room
-        room-id: Paragraph to display the room ID
-        qr-code: Image to display the QR code
-        
-        main function is the create a room that users can join to submit songs
-
-        */
-
-        // document.getElementById("join-room-button").addEventListener("click", function () {
-        //     const roomId = document.getElementById("room-id-input").value;
-            
-        //     if (!roomId) {
-        //         alert("Enter Room ID");
-        //         return;
-        //     }
-
-        //     socket.emit("join", { room_id: roomId, user_id: "DJ" });
-        //     currentRoom = roomId;
-        //     alert(`DJ joined room ${roomId}`);
-        // });
-
-        // document.getElementById("leave-room-button").addEventListener("click", function () {
-        //     if (!currentRoom) {
-        //         alert("You're not in any room!");
-        //         return;
-        //     }
-    
-        //     socket.emit("leave", { room_id: currentRoom, user_id: "DJ" });
-        //     alert(`DJ left room ${currentRoom}`);
-        //     currentRoom = null;
-        // });
-
-        // socket.on("message", function (data) {
-        //     const requestList = document.getElementById("song-requests");
-        //     const listItem = document.createElement("li");
-        //     listItem.textContent = data.msg;
-        //     requestList.appendChild(listItem);
-        // });
-
-        // document.getElementById("create-room-button").addEventListener("click", async () => {
-        //     const hostId = document.getElementById("host-id-input").value.trim();
-        //     if (!hostId) {
-        //         alert("Please enter a host ID");
-        //         return;
-        //     }
-        
-        //     try {
-        //         const response = await fetch("http://localhost:3000/create-room", {
-        //             method: "POST",
-        //             headers: { "Content-Type": "application/json" },
-        //             body: JSON.stringify({ host_id: hostId })
-        //         });
-        
-        //         const data = await response.json();
-        //         if (response.ok) {
-        //             document.getElementById("room-info").innerText = `Room Created! ID: ${data.room_id}, Host: ${data.host_id}`;
-        //         } else {
-        //             alert(data.error);
-        //         }
-        //     } catch (error) {
-        //         console.error("Error creating room:", error);
-        //         alert("Failed to create room.");
-        //     }
-        // });
-
-        document.getElementById('data-form').addEventListener('submit', function(e) {
-            e.preventDefault();  // Prevent default form submission
-        
-            const query = document.getElementById('data').value;
-        
-            fetch(`/search?query=${encodeURIComponent(query)}`)
-                .then(response => response.json())
-                .then(data => {
-                    const resultDiv = document.getElementById('result');
-                    resultDiv.innerHTML = '';  // Clear previous results
-        
-                    if (data.error) {
-                        resultDiv.innerHTML = `<p>Error: ${data.error}</p>`;
-                    } else {
-                        displayResult(data); // <-- ✅ This renders your fancy HTML!
-                    }
-                })
-                .catch(error => {
-                    console.error('Search error:', error);
-                    document.getElementById('result').innerHTML = `<p>Error: ${error}</p>`;
-                });
-        });
-
-        function displayResult(result) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = ''; // Clear previous results
-
-            result.slice(0, 5).forEach(song => { // Ensure only 5 results are displayed
-                const songDiv = document.createElement('div');
-                songDiv.classList.add('songDiv'); // Apply CSS class
-                songDiv.innerHTML = `
-                    <h3>${song.n}</h3>
-                    <p><strong>Artist(s):</strong> ${song.as.join(', ')}</p>
-                    <p><strong>Album:</strong> ${song.an}</p>
-                    <p><strong>Duration:</strong> ${(song.d / 1000).toFixed(2)} seconds</p>
-                    <img src="${song.ci[0].iu}" alt="Thumbnail" width="150">
-
-                    <h4>DJ Metrics:</h4>
-                    <ul>
-                    <p><strong>BPM:</strong> ${song.b} | <strong>Key:</strong> ${song.k} | <strong>Camelot:</strong> ${song.c}</p>
-                    <p><strong>Duration:</strong> ${song.d} | <strong>Release Date:</strong> ${song.rd}</p>
-                    <li><strong>Popularity:</strong> ${song.p}</li>
-                    <li><strong>Energy:</strong> ${song.e}</li>
-                    <li><strong>Danceability:</strong> ${song.da}</li>
-                    <li><strong>Happiness:</strong> ${song.h}</li>
-                    <li><strong>Instrumentalness:</strong> ${song.i}</li>
-                    <li><strong>Liveness:</strong> ${song.li}</li>
-                    <li><strong>Loudness:</strong> ${song.lo}</li>
-                    <li><strong>Speechiness:</strong> ${song.s}</li>
-                </ul>
-                `;
-
-                resultDiv.appendChild(songDiv);
-            });
-        }
-
-        async function getRecommendations() {
-            let songId = document.getElementById("trackSelect").value;
-            
-            if (!songId) {
-                alert("Please select a song!");
-                return;
-            }
-
-            console.log(songId)
-
-            const response = await fetch(`/recommend?song_id=${songId}&top_k=5`);
-            const data = await response.json();
-
-            console.log(data)
-
-            let recommendationsDiv = document.getElementById("recommendations");
-            recommendationsDiv.innerHTML = "<h3>Recommended Tracks</h3>";
-
-            if (data.error) {
-                recommendationsDiv.innerHTML += `<p style="color: red;">${data.error}</p>`;
-                return;
-            }
-
-            let table = `<table id="recommendationsTable" class="display">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Album</th>
-                        <th>Key</th>
-                        <th>BPM</th>
-                        <th>Distance</th>
-                    </tr>
-                </thead>
-                <tbody>`;
-
-            data.forEach(track => {
-                table += `<tr>
-                            <td>${track.Title}</td>
-                            <td>${track.Artist}</td>
-                            <td>${track.Album}</td>
-                            <td>${track.Key}</td>
-                            <td>${track.BPM}</td>
-                            <td>${track.Distance.toFixed(2)}</td>
-                            </tr>`;
-            });
-
-            table += `</tbody></table>`;
-
-            recommendationsDiv.innerHTML += table;
-
-            $('#recommendationsTable').DataTable();
-        }
-    </script>
+</body>

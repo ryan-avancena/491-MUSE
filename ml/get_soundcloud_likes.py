@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 
 service = Service(ChromeDriverManager().install())  # or provide your own path to chromedriver
 driver = webdriver.Chrome(service=service)
@@ -33,5 +34,8 @@ for card in soup.select('li.soundList__item'):
 driver.quit()
 
 # Print results
-for track in tracks:
-    print(f"{track['title']} by {track['artist']}\nLink: {track['link']}\n")
+# for track in tracks:
+#     print(f"{track['title']} by {track['artist']}\nLink: {track['link']}\n")
+
+with open("../data/liked_tracks.json", "w", encoding="utf-8") as f:
+    json.dump(tracks, f, ensure_ascii=False, indent=2)

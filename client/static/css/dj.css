@@ -1,5 +1,105 @@
+/* Font Faces */
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueLight.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueLightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueRoman.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueItalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueMedium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueMediumItalic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueBold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueBoldItalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueBlack.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueBlackItalic.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueThin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueThinItalic.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueUltralight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("/static/fonts/HelveticaNeueUltralightItalic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Global Styles */
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +113,7 @@ body {
     flex-direction: column;
 }
 
-/* GLOW TEXT HEADING */
+/* Glow Text Heading */
 #glow-text {
     font-size: 8rem;
     font-weight: bold;
@@ -22,52 +122,92 @@ body {
     transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
-
-/* RECOMMENDATION SECTION*/
-
+/* Data Table Styling */
 table.dataTable {
-    width: 50vw !important;
+    width: 47.5vw !important;
     border-collapse: collapse;
     margin-top: 20px;
     color: white;
-    background-color: black;
-    border-radius: 30px;
-    border-color: #7D7D7D;
+    background-color: rgb(20, 20, 20);
 }
+
+tr {
+    cursor: pointer;
+    background-color: #1b1b1b;
+    border-radius: 30px !important;
+    
+}
+
+tr:hover {
+    background-color: #f3f582 !important; /* Hover effect */
+    color: black;
+    transition: background-color 0.3s ease;
+    border-radius: 30px !important
+}
+
+tr.selected {
+    background-color: #f3f582 !important; /* Yellow background when selected */
+}
+
+/* Table Header and Cells */
 th, td {
     padding: 10px;
     text-align: left;
+    width: 2vw !important;
 }
+
 th {
-    background-color: #FFEB53;
+    background-color: #1b1b1b;
+    color: #FFEB53;
+    font-style: italic;
+}
+
+/* DataTables Search */
+.dataTables_filter {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-family: 'Helvetica Neue','Segoe UI', sans-serif;
+}
+
+.dataTables_filter label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #f8f8f8;
+}
+
+.dataTables_filter input[type="search"] {
+    margin-left: 8px;
+    padding: 6px 12px;
+    background-color: white;
     color: black;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.2s ease;
 }
 
-#recommendationsTable {
-    margin-top: 20px;
+.dataTables_filter input[type="search"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.2);
+    color: white;
 }
 
+.dataTables_filter input[type="search"]::placeholder {
+    color: #888;
+    font-style: italic;
+    font-size: 14px;
+}
 
-
+/* Recommendation Section */
 .recommendation-section {
-    /* display: flex; */
     width: 50vw;
-    align-items: center;    /* Vertically center the items */
-    justify-content: center; /* Center the items horizontally */
-    flex-direction: row;     /* Place the select and button on the same line */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 30px;
-    border: solid 2px #7D7D7D; /* Fix the spacing around the '2px' */
-    gap: 10px;               /* Optional: Add space between the select and button */
+    border: solid 2px #7D7D7D;
+    gap: 10px;
     padding: 1rem;
-}
-
-
-#trackSelect {
-    margin: 1vh;
-    width: 20vw;
-    font-size: 1rem;
-
-    border-radius: 30px;
 }
 
 .recommendation-section > label {
@@ -78,13 +218,15 @@ th {
 .recommendation-section select {
     flex: 1;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
 }
 
 .recommendation-section select option {
     background-color: black;
     color: white;
-    flex: 1;
 }
 
 .recommendation-section > button {
@@ -94,11 +236,35 @@ th {
     background-color: #444;
     color: white;
     border: none;
+    padding: 6px 12px;
     cursor: pointer;
-  }
+}
 
+/* Table for Recommendations */
+#recommendationsTable {
+    display: block;
+    margin-top: 20px;
+}
 
-/* SEARCH SONG SECTION */
+#trackSelect {
+    margin: 1vh;
+    width: 20vw;
+    font-size: 0.5rem;
+    border-radius: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+
+#tracksTable_filter {
+    flex-grow: 1;
+}
+
+/* Search Song Section */
 .songDiv {
     display: flex;
     justify-content: space-between;
@@ -107,3 +273,4 @@ th {
     padding: 10px;
     border: 1px solid black;
 }
+
