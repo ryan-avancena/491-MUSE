@@ -41,7 +41,7 @@ def index():
 @app.route('/dj')
 def dj():
     df = pd.read_csv('../data/merged_tracks.csv')
-    tracks = df[["ID", "Title"]].to_dict(orient="records")
+    tracks = df[["Title", "Artist", "Key", "BPM", "Tags"]].to_dict(orient="records")
     return render_template('dj.html',tracks=tracks)
 
 @app.route('/user')

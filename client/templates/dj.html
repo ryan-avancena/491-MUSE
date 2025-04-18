@@ -12,6 +12,7 @@
 </head>
 <body>
     <h1 id="glow-text">MUSE</h1>
+
     <div class="recommendation-section">
         <!-- <label for="trackSelect">choose a song:</label> -->
         <select id="trackSelect">
@@ -27,11 +28,11 @@
         <table id="tracksTable" class="display">
             <thead>
                 <tr>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                    <th>Key</th>
-                    <th>BPM</th>
+                    <th>title</th>
+                    <th>artist</th>
+                    <th>key</th>
+                    <th>bpm</th>
+                    <th>tags</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,9 +40,9 @@
                 <tr>
                     <td>{{ track.Title }}</td>
                     <td>{{ track.Artist }}</td>
-                    <td>{{ track.Album }}</td>
                     <td>{{ track.Key }}</td>
                     <td>{{ track.BPM }}</td>
+                    <td>{{ track.Tags}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -53,14 +54,15 @@
 
     <hr>
 
-    <h2>Song Requests</h2>
-    <ul id="song-requests"></ul>
+    <div class="requests-section">
+        <h2>Song Requests</h2>
+        <ul id="song-requests"></ul>
+    </div>
 
     <hr>
 
     <h2>search</h2>
     <form id="data-form">
-        <!-- <label for="data">enter a song ...</label> -->
         <input type="text" id="data" name="data" required>
         <button type="submit">search</button>
     </form>
@@ -82,7 +84,7 @@
 
             const normalized = Math.min(Math.max((volume + 50) / 50, 0), 1);
             // const hue = normalized * 360;
-            const glowStrength = normalized * 3;
+            const glowStrength = normalized * 8;
             const hue = 55; // yellow hue
 
             glowText.style.color = `hsl(${hue}, 100%, 70%)`;
@@ -160,26 +162,27 @@
         //     }
         // });
 
-        document.getElementById('data-form').addEventListener('submit', async function(event) {
-            event.preventDefault(); // ✅ Add this!
-            const data = document.getElementById('data').value;
-            console.log("Query:", data);
-            try {
-                // send the query to Flask backend
-                const response = await fetch('/search?query=' + encodeURIComponent(data), {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+        document.getElementById('data-form').addEventListener('submit', function(e) {
+            e.preventDefault();  // Prevent default form submission
+        
+            const query = document.getElementById('data').value;
+        
+            fetch(`/search?query=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.innerHTML = '';  // Clear previous results
+        
+                    if (data.error) {
+                        resultDiv.innerHTML = `<p>Error: ${data.error}</p>`;
+                    } else {
+                        displayResult(data); // <-- ✅ This renders your fancy HTML!
+                    }
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    document.getElementById('result').innerHTML = `<p>Error: ${error}</p>`;
                 });
-
-                const result = await response.json();
-                console.log(result);
-                displayResult(result);
-                // document.getElementById('result').textContent = JSON.stringify(result, null, 2);
-            } catch (error) {
-                console.error('Error:', error);
-            }
         });
 
         function displayResult(result) {
