@@ -6,6 +6,7 @@ fetch("/static/data/visualization_embeddings.json")
     const x = data.map(d => d.x);
     const y = data.map(d => d.y);
     const z = data.map(d => d.z || Math.random() * 2 - 1);
+    
     const text = data.map(d => `${d.Title} by ${d.Artist}`);
     const ids = data.map(d => d.ID);
 
@@ -60,7 +61,6 @@ fetch("/static/data/visualization_embeddings.json")
     };
 
     Plotly.newPlot("visualizer", [trace], layout).then(() => {
-      // Animate points flying in
       Plotly.animate("visualizer", {
         data: [{ x, y, z }],
         traces: [0]

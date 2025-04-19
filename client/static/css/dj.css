@@ -119,8 +119,95 @@ body {
     font-weight: bold;
     text-align: center;
     color: white;
-    margin-top: 5vw;
     transition: color 0.1s ease, text-shadow 0.1s ease;
+    margin-right: 4vw;
+}
+
+.site-header {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;  
+}
+
+h2 {
+    margin-left: 2vw;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Dim background */
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: rgb(30, 30, 30);
+    margin: 10% auto;
+    padding: 20px 30px;
+    border-radius: 15px;
+    width: 60%;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 0 15px #000;
+}
+
+.personal-message {
+    /* margin-top: 2rem; */
+    padding-left: 0.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: white;
+}
+
+.personal-message p {
+    margin-bottom: 0.75rem;
+}
+
+.modal-content h1 {
+    color: #FFEB53;
+    line-height: 1.4; /* improves readability between lines within each element */
+    font-size: 6rem;
+}
+
+.modal-content h4 {
+    margin-top: 2vh;
+    color: #FFEB53;
+    line-height: 1.4; /* improves readability between lines within each element */
+    font-size: 3rem;
+}
+
+.how-it-works {
+    margin-top: 1rem;
+    padding-left: 1.5rem; /* indents the list nicely */
+    line-height: 1.6;      /* improves line spacing */
+    font-size: 1rem;
+    color: white;          /* or any color to match your theme */
+}
+
+.how-it-works li {
+    margin-bottom: 0.75rem; /* spacing between items */
+}
+
+/* Close button */
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFEB53;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ffffff;
 }
 
 /* Recommendation Section */
@@ -128,7 +215,6 @@ body {
     width: 90vw;
     height: 80vh;
     margin-top: 0;
-    /* margin-left: 3vw; */
     display: flex;
     flex-direction: row;
     border-radius: 30px;
@@ -137,11 +223,13 @@ body {
 }
 
 #visualizer{
+    width: 35vw;
+    height: 70vh;
     flex-shrink: 0;
 }
 
 .table-section-container {
-    flex: 1; /* takes up the remaining space */
+    flex: 1; 
     border: solid 2px #7D7D7D;
     border-radius: 30px;
     padding: 1rem;
@@ -158,10 +246,8 @@ body {
     flex-grow: 1;
 }
 
-
-
 table.dataTable {
-    width: 58vw !important; /* Ensure the table takes up the correct width */
+    width: 58vw !important; 
     height: 60vh;
     table-layout: fixed;
     border-collapse: collapse;
@@ -204,14 +290,12 @@ td:nth-child(1), th:nth-child(1) {
     width: 10vw; /* Adjust this value for the Title column */
 }
 
-/* Prevent content overflow */
 td, th {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-/* Hover and selected row styles */
 tr {
     cursor: pointer;
     background-color: #1b1b1b;
@@ -229,8 +313,7 @@ tr.selected {
     background-color: #f3f582 !important; /* Yellow background when selected */
 }
 
-
-/* General styling */
+/* general styling within the table */
 tr {
     cursor: pointer;
     background-color: #1b1b1b;
@@ -248,7 +331,7 @@ tr.selected {
     background-color: #f3f582 !important; /* Yellow background when selected */
 }
 
-/* DataTables Search */
+/* search query at top */
 .dataTables_filter {
     float: left !important; /* Align the search filter to the left */
     font-family: 'Helvetica Neue','Segoe UI', sans-serif;
@@ -287,7 +370,18 @@ tr.selected {
 }
 
 
-/* Search Song Section */
+/* 
+
+search-song-section
+
+*/
+
+.search-song-section {
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
 .songDiv {
     display: flex;
     justify-content: space-between;

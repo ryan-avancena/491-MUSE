@@ -11,13 +11,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script src="{{ url_for('static', filename='js/table.js') }}"></script>
     <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
     <!-- <script src="{{ url_for('static', filename='js/recommend.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/visualizer.js') }}"></script>
     <title>MUSE</title>
 </head>
 <body>
-    <h1 id="glow-text">MUSE</h1>
+    <header class="site-header">
+        <h1 id="glow-text">MUSE</h1>
+        <h2 id="howItWorksBtn" style="cursor: pointer;">how it works</h2>
+        <h2>my other projects</h2>
+    </header>
+
+    <div id="howItWorksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h1>MUSE</h1>
+            <div class="personal-message">
+                <p>Keep in mind, I have only tried mixing twice in my life (and I loved it).</p>
+                <p>But I always listen to Boiler Rooms, live sets, or festival music whenever I study.</p>
+                <p>Plus, it has always been one of my dreams to be a producer/DJ/or a contributor to the music industry.</p>
+                <p>With that being said, MUSE is my "first contribution" to this industry.</p>
+            </div>
+
+            <h4>how it works</h4>
+            <ol class="how-it-works">
+                <li>A user enters their SoundCloud account name into the search bar.</li>
+                <li>The application begins to scrape the users' liked songs, as you can connect SoundCloud+ to software like Rekordbox and Serato Pro.</li>
+                <li>After scraping and embedding the users' liked songs, we apply FAISS embeddings to embed the songs in a 3D space.</li>
+                <li>The DJ can see the songs in this embedded space to find potential tracks to mix by searching the table or clicking in the space.</li>
+            </ol>
+        </div>
+    </div>
 
     <div class="recommendation-section">
         <div class="table-section-container">
@@ -49,11 +73,9 @@
             </table>
         </div>
 
-        <div id="visualizer" style="width:40%; height:500px;"></div>
+        <div id="visualizer"></div>
         
     </div>
-
-    <hr>
 
     <!-- <div class="requests-section">
         <h2>Song Requests</h2>
@@ -61,11 +83,38 @@
     </div> -->
 
     <h2>search</h2>
-    <form id="data-form">
-        <input type="text" id="data" name="data" required>
-        <button type="submit">search</button>
-    </form>
+    <div class="search-container">
+        <form id="data-form">
+            <input type="text" id="data" name="data" required>
+            <button type="submit">search</button>
+        </form>
 
-    <h2>Result:</h2>
-    <div id="result"></div>
+        <h2>Result:</h2>
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+    <script>
+        // Get elements
+        const modal = document.getElementById("howItWorksModal");
+        const btn = document.getElementById("howItWorksBtn");
+        const span = document.querySelector(".close-btn");
+    
+        // Show modal when "how it works" is clicked
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+    
+        // Close when user clicks the close button
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+    
+        // Close when clicking outside the modal box
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
 </body>
