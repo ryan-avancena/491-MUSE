@@ -12,53 +12,45 @@
     <script src="{{ url_for('static', filename='js/table.js') }}"></script>
     <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
     <script src="{{ url_for('static', filename='js/search.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/recommend.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/recommend.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/visualizer.js') }}"></script>
     <title>MUSE</title>
 </head>
 <body>
     <h1 id="glow-text">MUSE</h1>
 
-    <div id="visualizer" style="width:50%; height:500px; margin-top: 30px;"></div>
-
     <div class="recommendation-section">
-        <div class="controls">
-            <div id="tracksTable_filter" style="width:100%" class="dataTables_filter">
-                <!-- This is the built-in search bar of DataTables -->
-            </div>
-        </div>
-        
-
         <div class="table-section-container">
-            <!-- Main table (tracks table) -->
-            <div class="table-section">
-                <table id="tracksTable" class="display">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Artist</th>
-                            <th>Key</th>
-                            <th>BPM</th>
-                            <th>Tags</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for track in tracks %}
-                        <tr data-id="{{ track.ID }}">
-                            <td>{{ track.Title }}</td>
-                            <td>{{ track.Artist }}</td>
-                            <td>{{ track.Key }}</td>
-                            <td>{{ track.BPM }}</td>
-                            <td>{{ track.Tags }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+            <div class="controls">
+                <div id="tracksTable_filter" class="dataTables_filter"></div>
             </div>
-        
-            <!-- Recommendations table -->
-            <!-- <div id="recommendations" class="table-section"></div> -->
+            <!-- Main table (tracks table) -->
+            <table id="tracksTable" class="display">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Key</th>
+                        <th>BPM</th>
+                        <th>Tags</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for track in tracks %}
+                    <tr data-id="{{ track.ID }}">
+                        <td>{{ track.Title }}</td>
+                        <td>{{ track.Artist }}</td>
+                        <td>{{ track.Key }}</td>
+                        <td style="width: 2vw">{{ track.BPM }}</td>
+                        <td style="font-size: 0.8rem">{{ track.Tags }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
+
+        <div id="visualizer" style="width:40%; height:500px;"></div>
+        
     </div>
 
     <hr>

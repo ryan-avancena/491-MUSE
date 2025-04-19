@@ -115,46 +115,67 @@ body {
 
 /* Glow Text Heading */
 #glow-text {
-    font-size: 8rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     color: white;
+    margin-top: 5vw;
     transition: color 0.1s ease, text-shadow 0.1s ease;
 }
 
-/* Data Table Styling */
+/* Recommendation Section */
+.recommendation-section {
+    width: 90vw;
+    height: 80vh;
+    margin-top: 0;
+    /* margin-left: 3vw; */
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    gap: 10px;
+    padding: 1rem;
+}
+
+#visualizer{
+    flex-shrink: 0;
+}
+
+.table-section-container {
+    flex: 1; /* takes up the remaining space */
+    border: solid 2px #7D7D7D;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* margin-bottom: 20px; */
+}
+
+#tracksTable_filter {
+    flex-grow: 1;
+}
+
+
+
 table.dataTable {
-    width: 47.5vw !important;
+    width: 58vw !important; /* Ensure the table takes up the correct width */
+    height: 60vh;
+    table-layout: fixed;
     border-collapse: collapse;
     margin-top: 20px;
     color: white;
     background-color: rgb(20, 20, 20);
 }
 
-tr {
-    cursor: pointer;
-    background-color: #1b1b1b;
-    border-radius: 30px !important;
-    
-}
-
-tr:hover {
-    background-color: #f3f582 !important; /* Hover effect */
-    color: black;
-    transition: background-color 0.3s ease;
-    border-radius: 30px !important
-}
-
-tr.selected {
-    background-color: #f3f582 !important; /* Yellow background when selected */
-}
-
-/* Table Header and Cells */
 th, td {
-    padding: 10px;
+    font-size: 1rem;
     text-align: left;
-    width: 2vw !important;
+    padding: 10px;
 }
+
 
 th {
     background-color: #1b1b1b;
@@ -162,20 +183,87 @@ th {
     font-style: italic;
 }
 
+/* Adjust individual column widths */
+td:nth-child(5), th:nth-child(5) { 
+    width: 3vw; /* Adjust this value for the Tags column */
+}
+
+td:nth-child(4), th:nth-child(4) {
+    width: 3vw; /* Adjust this value for the BPM column */
+}
+
+td:nth-child(3), th:nth-child(3) { 
+    width: 4vw; /* Adjust this value for the Key column */
+}
+
+td:nth-child(2), th:nth-child(2) { 
+    width: 8vw; /* Adjust this value for the Artist column */
+}
+
+td:nth-child(1), th:nth-child(1) { 
+    width: 10vw; /* Adjust this value for the Title column */
+}
+
+/* Prevent content overflow */
+td, th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Hover and selected row styles */
+tr {
+    cursor: pointer;
+    background-color: #1b1b1b;
+    border-radius: 30px !important;
+}
+
+tr:hover {
+    background-color: #f3f582 !important; /* Hover effect */
+    color: black;
+    transition: background-color 0.3s ease;
+    border-radius: 30px !important;
+}
+
+tr.selected {
+    background-color: #f3f582 !important; /* Yellow background when selected */
+}
+
+
+/* General styling */
+tr {
+    cursor: pointer;
+    background-color: #1b1b1b;
+    border-radius: 30px !important;
+}
+
+tr:hover {
+    background-color: #f3f582 !important; /* Hover effect */
+    color: black;
+    transition: background-color 0.3s ease;
+    border-radius: 30px !important;
+}
+
+tr.selected {
+    background-color: #f3f582 !important; /* Yellow background when selected */
+}
+
 /* DataTables Search */
 .dataTables_filter {
-    text-align: left;
-    margin-bottom: 1rem;
+    float: left !important; /* Align the search filter to the left */
     font-family: 'Helvetica Neue','Segoe UI', sans-serif;
 }
 
 .dataTables_filter label {
     font-weight: 600;
+    border-radius: 30px;
     font-size: 16px;
+    margin-bottom: 1rem;
     color: #f8f8f8;
 }
 
 .dataTables_filter input[type="search"] {
+    width: 20vw; /* Adjust the width as needed */
     margin-left: 8px;
     padding: 6px 12px;
     background-color: white;
@@ -198,71 +286,6 @@ th {
     font-size: 14px;
 }
 
-/* Recommendation Section */
-.recommendation-section {
-    width: 50vw;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 30px;
-    border: solid 2px #7D7D7D;
-    gap: 10px;
-    padding: 1rem;
-}
-
-.recommendation-section > label {
-    font-size: 1.5rem;
-    white-space: nowrap;
-}
-
-.recommendation-section select {
-    flex: 1;
-    padding: 0.5rem;
-    font-size: 0.5rem;
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-}
-
-.recommendation-section select option {
-    background-color: black;
-    color: white;
-}
-
-.recommendation-section > button {
-    width: 12vw;
-    height: 6vh;
-    border-radius: 30px;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-/* Table for Recommendations */
-#recommendationsTable {
-    display: block;
-    margin-top: 20px;
-}
-
-#trackSelect {
-    margin: 1vh;
-    width: 20vw;
-    font-size: 0.5rem;
-    border-radius: 30px;
-}
-
-.controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-bottom: 20px; */
-}
-
-#tracksTable_filter {
-    flex-grow: 1;
-}
 
 /* Search Song Section */
 .songDiv {
