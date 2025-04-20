@@ -1,11 +1,16 @@
-from flask import Flask, render_template
-from flask_socketio import SocketIO, join_room, leave_room, send
+import sys
 import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ml')))
+
+from flask import Flask, request, render_template, redirect, url_for
+from flask_socketio import SocketIO, join_room, leave_room, send
 from dotenv import load_dotenv
-from google.cloud import firestore
 import threading
 from render_audio import audio_recording
 import pandas as pd 
+import requests
+import subprocess
 
 # blueprints
 from routes.auth import auth_bp
@@ -13,11 +18,12 @@ from routes.room import room_bp
 from routes.search import search_bp
 from routes.vector_db import vector_db_bp
 
+from get_soundcloud_likes import get_likes
+from embeddings import create_vector_db, generate_visualization_json
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, cors_allowed_origins="*")
-db = firestore.Client(project="muse491")
-rooms = {}  
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '../server/.env')
 load_dotenv(dotenv_path)
@@ -38,45 +44,33 @@ app.register_blueprint(vector_db_bp)
 def index():
     return render_template('index.html')
 
+@app.route('/submit-soundcloud',methods=['POST'])
+def submit_soundcloud():
+    soundcloud_username = request.form['soundcloud_username']
+    print("Received SoundCloud username:", soundcloud_username)
+
+    try:
+        get_likes(soundcloud_username)
+        requests.post("http://localhost:3000/create-embed-db")
+        subprocess.run(['node', '../server/create_embed_db.js'], check=True)
+        track_vectors, final_df, index, track_metadata = create_vector_db()
+        final_df.to_csv('../data/merged_tracks.csv', index=False)
+        generate_visualization_json(track_vectors, final_df, "../client/static/data/visualization_embeddings.json")
+
+        return redirect(url_for('dj'))
+
+    except Exception as e:
+        return f"An error occurred during processing: {e}", 500
+
 @app.route('/dj')
 def dj():
     df = pd.read_csv('../data/merged_tracks.csv')
-    tracks = df[["ID","Title", "Artist", "Key", "BPM", "Tags"]].to_dict(orient="records")
+    tracks = df[["ID","Title", "Artist", "Key", "BPM", "Camelot", "Tags"]].to_dict(orient="records")
     return render_template('dj.html',tracks=tracks)
 
 @app.route('/user')
 def user():
     return render_template('user.html', client_id=SPOTIFY_CLIENT_ID)
 
-@socketio.on('join')
-def handle_join(data):
-    room_id = data['room_id']
-    user_id = data['user_id']
-    
-    join_room(room_id)
-    rooms.setdefault(room_id, []).append(user_id)  # Track users in rooms
-    send({'msg': f'{user_id} joined room {room_id}'}, room=room_id)
-
-@socketio.on('leave')
-def handle_leave(data):
-    room_id = data['room_id']
-    user_id = data['user_id']
-    
-    leave_room(room_id)
-
-    if room_id in rooms and user_id in rooms[room_id]:
-        rooms[room_id].remove(user_id)
-        if not rooms[room_id]:
-            del rooms[room_id]
-
-    send({'msg': f'{user_id} left room {room_id}'}, room=room_id)
-
-@socketio.on('song_request')
-def handle_song_request(data):
-    room_id = data['room_id']
-    song_name = data['song']
-    user_id = data['user_id']
-
-    send({'msg': f"{user_id} requested: {song_name}"}, room=room_id)
 if __name__ == '__main__':
     socketio.run(app, debug=True, host='0.0.0.0', port=5000)

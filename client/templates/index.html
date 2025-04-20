@@ -14,8 +14,10 @@
         <button>start session</button>
     </a>
 
-    <!-- <a href="{{ url_for('user') }}">
-        <button>Go to User Page</button>
-    </a> -->
+    <form action="/submit-soundcloud" method="POST">
+        <input type="text" id="soundcloud_username" name="soundcloud_username"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>
