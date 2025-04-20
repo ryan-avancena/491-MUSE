@@ -14,6 +14,7 @@ const __dirname = path.dirname(__filename);
 // ENV for Last.fm key
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const LAST_FM_KEY = process.env.LAST_FM_API_KEY;
+console.log(LAST_FM_KEY)
 
 // Paths
 const CSV_FILE = path.join(__dirname, "../data/songs_database.csv");
@@ -105,7 +106,8 @@ async function searchSong(query, isFirstWrite = false) {
 // Last.fm tag fetcher
 const fetchTags = async (artist, track) => {
     try {
-        const url = `https://ws.audioscrobbler.com/2.0/?method=track.gettoptags&artist=${encodeURIComponent(artist)}&track=${encodeURIComponent(track)}&api_key=${LAST_FM_KEY}&format=json`;
+        const url = `https://ws.audioscrobbler.com/2.0/?method=track.getTopTags&artist=${encodeURIComponent(artist)}&track=${encodeURIComponent(track)}&api_key=${LAST_FM_KEY}&format=json`;
+
         const response = await fetch(url);
         if (!response.ok) throw new Error(`API error: ${response.statusText}`);
 
@@ -118,6 +120,23 @@ const fetchTags = async (artist, track) => {
     }
 };
 
+const fetchArtistTags = async (artist) => {
+    try {
+        const url = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist=${encodeURIComponent(artist)}&api_key=${LAST_FM_KEY}&format=json`;
+        // const urk = `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptags&artist=${ARTIST}&api_key=${LAST_FM_KEY}&format=json`;
+
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`API error: ${response.statusText}`);
+
+        const result = await response.json();
+        const tags = result.toptags?.tag?.slice(0, 5).map(tag => tag.name).join(", ") || "No tags";
+        return tags;
+    } catch (error) {
+        console.error(`Error fetching tags for ${artist}`, error);
+        return "Error fetching tags";
+    }
+}
+
 // Tag processor
 async function embedTagsFromCache() {
     if (!fs.existsSync(CACHE_FILE)) {
@@ -128,6 +147,8 @@ async function embedTagsFromCache() {
     const cache = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
     const limit = pLimit(5); // concurrency limit
     const promises = [];
+
+    console.log(LAST_FM_KEY)
 
     for (const key in cache) {
         if (!Array.isArray(cache[key])) continue;
@@ -140,6 +161,10 @@ async function embedTagsFromCache() {
 
             promises.push(limit(async () => {
                 const tags = await fetchTags(artist, track);
+                if (tags === "No tags") {
+                    tags = await fetchArtistTags(artist);
+                    console.log(tags)
+                }
                 return `${id},${artist},"${track}","${tags}"`;
             }));
         }

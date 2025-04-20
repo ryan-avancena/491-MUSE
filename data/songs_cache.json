@@ -1,89 +1,45 @@
 {
-  "\"S&M\" Rihanna": [
+  "\"Piece Of Your Heart\" MEDUZA": [
     {
-      "id": "71BqAINEnezjQfxE4VuJfq",
-      "n": "\"Slut!\" (Taylor's Version) (From The Vault)",
+      "id": "6iW38RGqdDGOofmz2HeXLW",
+      "n": "Piece Of Your Heart - Alok Remix",
       "as": [
-        "Taylor Swift"
+        "MEDUZA",
+        "Alok",
+        "Goodboys"
       ],
       "l": null,
-      "an": "1989 (Taylor's Version)",
-      "rd": "2023-10-26",
-      "is": false,
-      "ie": false,
-      "d": 180381,
-      "p": 77,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 78,
-      "ac": 0.33,
-      "da": 0.621,
-      "e": 0.415,
-      "h": 0.313,
-      "i": 0.000112,
-      "li": 0.0634,
-      "lo": -13.187,
-      "s": 0.0543,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273904445d70d04eb24d6bb79ac",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02904445d70d04eb24d6bb79ac",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851904445d70d04eb24d6bb79ac",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "2262bWmqomIaJXwCRHr13j",
-      "n": "Sailor Song",
-      "as": [
-        "Gigi Perez"
-      ],
-      "l": null,
-      "an": "Sailor Song",
-      "rd": "2024-07-26",
+      "an": "Piece Of Your Heart (Alok Remix)",
+      "rd": "2019-06-07",
       "is": true,
       "ie": false,
-      "d": 211978,
-      "p": 96,
-      "k": "B Major",
-      "kv": 11,
-      "c": "1B",
-      "b": 95,
-      "ac": 0.682,
-      "da": 0.494,
-      "e": 0.413,
-      "h": 0.273,
-      "i": 0.0000672,
-      "li": 0.193,
-      "lo": -10.432,
-      "s": 0.0254,
+      "d": 166451,
+      "p": 72,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 124,
+      "ac": 0.0312,
+      "da": 0.797,
+      "e": 0.86,
+      "h": 0.192,
+      "i": 0.0137,
+      "li": 0.334,
+      "lo": -4.38,
+      "s": 0.0413,
       "ci": [
         {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273e6065f209e0a01986206bd53",
+          "iu": "https://i.scdn.co/image/ab67616d0000b2730df78e6e88fdefb1f8f90d55",
           "iw": 640,
           "ih": 640
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02e6065f209e0a01986206bd53",
+          "iu": "https://i.scdn.co/image/ab67616d00001e020df78e6e88fdefb1f8f90d55",
           "iw": 300,
           "ih": 300
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00004851e6065f209e0a01986206bd53",
+          "iu": "https://i.scdn.co/image/ab67616d000048510df78e6e88fdefb1f8f90d55",
           "iw": 64,
           "ih": 64
         }
@@ -93,43 +49,665 @@
       "er": []
     },
     {
-      "id": "0CD7DzeCsuPJygddqlUVYa",
-      "n": "\"Slut!\" (Taylor's Version) (From The Vault)",
+      "id": "73zawW1ttszLRgT9By826D",
+      "n": "Man Made A Bar (feat. Eric Church)",
       "as": [
-        "Taylor Swift"
+        "Morgan Wallen",
+        "Eric Church"
       ],
       "l": null,
-      "an": "1989 (Taylor's Version) [Deluxe]",
-      "rd": "2023-10-27",
+      "an": "One Thing At A Time",
+      "rd": "2023-03-03",
       "is": false,
       "ie": false,
-      "d": 180381,
-      "p": 65,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 78,
-      "ac": 0.33,
-      "da": 0.621,
-      "e": 0.415,
-      "h": 0.313,
-      "i": 0.000112,
-      "li": 0.0634,
-      "lo": -13.187,
-      "s": 0.0543,
+      "d": 191231,
+      "p": 78,
+      "k": "E Major",
+      "kv": 4,
+      "c": "12B",
+      "b": 148,
+      "ac": 0.125,
+      "da": 0.501,
+      "e": 0.769,
+      "h": 0.451,
+      "i": 0.000184,
+      "li": 0.12,
+      "lo": -5.005,
+      "s": 0.0298,
       "ci": [
         {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273dc2bacae1dca83d26e2b1949",
+          "iu": "https://i.scdn.co/image/ab67616d0000b273705079df9a25a28b452c1fc9",
           "iw": 640,
           "ih": 640
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02dc2bacae1dca83d26e2b1949",
+          "iu": "https://i.scdn.co/image/ab67616d00001e02705079df9a25a28b452c1fc9",
           "iw": 300,
           "ih": 300
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00004851dc2bacae1dca83d26e2b1949",
+          "iu": "https://i.scdn.co/image/ab67616d00004851705079df9a25a28b452c1fc9",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "5RDUCbvwPZdmjFbhZ5EY4N",
+      "n": "Piece Of Your Heart",
+      "as": [
+        "MEDUZA",
+        "Goodboys"
+      ],
+      "l": null,
+      "an": "MEDUZA",
+      "rd": "2023-10-13",
+      "is": false,
+      "ie": false,
+      "d": 152913,
+      "p": 69,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 124,
+      "ac": 0.0405,
+      "da": 0.677,
+      "e": 0.744,
+      "h": 0.631,
+      "i": 0.000153,
+      "li": 0.074,
+      "lo": -6.806,
+      "s": 0.0296,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2738d7f3300dd80d2704664ff16",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e028d7f3300dd80d2704664ff16",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048518d7f3300dd80d2704664ff16",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Don't Let Me Let Go\" Dillon Francis": [
+    {
+      "id": "79dcn5vP9HwgyeyrUGlAVZ",
+      "n": "Don't Let Me Let Go (with ILLENIUM & Evan Giia)",
+      "as": [
+        "Dillon Francis",
+        "ILLENIUM",
+        "EVAN GIIA"
+      ],
+      "l": null,
+      "an": "This Mixtape is Fire TOO",
+      "rd": "2023-12-01",
+      "is": false,
+      "ie": false,
+      "d": 205479,
+      "p": 54,
+      "k": "A Major",
+      "kv": 9,
+      "c": "11B",
+      "b": 146,
+      "ac": 0.0353,
+      "da": 0.493,
+      "e": 0.713,
+      "h": 0.429,
+      "i": 0,
+      "li": 0.122,
+      "lo": -4.663,
+      "s": 0.0573,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273c6af01138c83149291621de3",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02c6af01138c83149291621de3",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851c6af01138c83149291621de3",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "6AI3ezQ4o3HUoP6Dhudph3",
+      "n": "Not Like Us",
+      "as": [
+        "Kendrick Lamar"
+      ],
+      "l": null,
+      "an": "Not Like Us",
+      "rd": "2024-05-04",
+      "is": true,
+      "ie": true,
+      "d": 274192,
+      "p": 96,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 101,
+      "ac": 0.0107,
+      "da": 0.898,
+      "e": 0.472,
+      "h": 0.214,
+      "i": 0,
+      "li": 0.141,
+      "lo": -7.001,
+      "s": 0.0776,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e021ea0c62b2339cbf493a999ad",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048511ea0c62b2339cbf493a999ad",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1Yqe3VYgjOhhJLtqkla2zc",
+      "n": "Don't Let Me Let Go (with ILLENIUM & EVAN GIIA)",
+      "as": [
+        "Dillon Francis",
+        "ILLENIUM",
+        "EVAN GIIA"
+      ],
+      "l": null,
+      "an": "Don't Let Me Let Go (with ILLENIUM & EVAN GIIA)",
+      "rd": "2022-07-08",
+      "is": true,
+      "ie": false,
+      "d": 205479,
+      "p": 44,
+      "k": "A Major",
+      "kv": 9,
+      "c": "11B",
+      "b": 146,
+      "ac": 0.0367,
+      "da": 0.488,
+      "e": 0.715,
+      "h": 0.397,
+      "i": 0,
+      "li": 0.122,
+      "lo": -4.656,
+      "s": 0.0562,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2735b6d394ac967c01042afa861",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e025b6d394ac967c01042afa861",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048515b6d394ac967c01042afa861",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"FISHER - Losing It\" FISHER": [
+    {
+      "id": "6ho0GyrWZN3mhi9zVRW7xi",
+      "n": "Losing It",
+      "as": [
+        "FISHER"
+      ],
+      "l": null,
+      "an": "Losing It",
+      "rd": "2018-07-13",
+      "is": true,
+      "ie": false,
+      "d": 248035,
+      "p": 74,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 125,
+      "ac": 0.00181,
+      "da": 0.76,
+      "e": 0.964,
+      "h": 0.643,
+      "i": 0.703,
+      "li": 0.0975,
+      "lo": -5.844,
+      "s": 0.0577,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2739367c1ee2eec0bf3a04b4868",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e029367c1ee2eec0bf3a04b4868",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048519367c1ee2eec0bf3a04b4868",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "5RXnHx69EemG0EXsmhtfki",
+      "n": "Closure (with Cash Cobain)",
+      "as": [
+        "41",
+        "Kyle Richh",
+        "Cash Cobain"
+      ],
+      "l": null,
+      "an": "Closure",
+      "rd": "2024-10-25",
+      "is": true,
+      "ie": true,
+      "d": 178346,
+      "p": 48,
+      "k": "E Minor",
+      "kv": 4,
+      "c": "9A",
+      "b": 140,
+      "ac": 0.309,
+      "da": 0.764,
+      "e": 0.519,
+      "h": 0.281,
+      "i": 0,
+      "li": 0.107,
+      "lo": -7.611,
+      "s": 0.188,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2739f0c1a8f95ef9c06b83c07f9",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e029f0c1a8f95ef9c06b83c07f9",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048519f0c1a8f95ef9c06b83c07f9",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "2KXwJZv1pRQFQ95Kj60jBN",
+      "n": "Losing It - Radio Edit",
+      "as": [
+        "FISHER"
+      ],
+      "l": null,
+      "an": "Losing It (Radio Edit)",
+      "rd": "2018-10-25",
+      "is": true,
+      "ie": false,
+      "d": 163247,
+      "p": 59,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 125,
+      "ac": 0.00176,
+      "da": 0.729,
+      "e": 0.965,
+      "h": 0.744,
+      "i": 0.66,
+      "li": 0.0973,
+      "lo": -5.711,
+      "s": 0.0624,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273ebeb52ef773c378153ceed31",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02ebeb52ef773c378153ceed31",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851ebeb52ef773c378153ceed31",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"SLANDER & WILLIAM BLACK - BACK TO U\" SLANDER & William Black": [
+    {
+      "id": "7F1CiKqrY44kh5cDqwHOnx",
+      "n": "Love Is Gone - Acoustic",
+      "as": [
+        "SLANDER",
+        "Dylan Matthew"
+      ],
+      "l": null,
+      "an": "Love Is Gone (Acoustic)",
+      "rd": "2019-11-13",
+      "is": true,
+      "ie": false,
+      "d": 176971,
+      "p": 77,
+      "k": "F# Major",
+      "kv": 6,
+      "c": "2B",
+      "b": 140,
+      "ac": 0.882,
+      "da": 0.541,
+      "e": 0.153,
+      "h": 0.359,
+      "i": 0.00000166,
+      "li": 0.16,
+      "lo": -10.654,
+      "s": 0.0303,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2733892a2a2c261629f34bb5536",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e023892a2a2c261629f34bb5536",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048513892a2a2c261629f34bb5536",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "6b7noKS8HNmHhphZN643dD",
+      "n": "High Voltage (with JT Foley)",
+      "as": [
+        "SLANDER",
+        "RIOT",
+        "JT FOLEY"
+      ],
+      "l": null,
+      "an": "High Voltage (with JT Foley)",
+      "rd": "2023-12-29",
+      "is": true,
+      "ie": false,
+      "d": 238795,
+      "p": 42,
+      "k": "C# Minor",
+      "kv": 1,
+      "c": "12A",
+      "b": 150,
+      "ac": 0.00792,
+      "da": 0.435,
+      "e": 0.924,
+      "h": 0.163,
+      "i": 0,
+      "li": 0.219,
+      "lo": -3.083,
+      "s": 0.0624,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2731f35b1a301d35643f366891b",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e021f35b1a301d35643f366891b",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048511f35b1a301d35643f366891b",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "4TIkSdsNSfqpuq6ZYvCjAz",
+      "n": "All You Need To Know (feat. Calle Lehmann)",
+      "as": [
+        "Gryffin",
+        "SLANDER",
+        "Calle Lehmann"
+      ],
+      "l": null,
+      "an": "Gravity",
+      "rd": "2019-10-24",
+      "is": false,
+      "ie": false,
+      "d": 238337,
+      "p": 61,
+      "k": "C Major",
+      "kv": 0,
+      "c": "8B",
+      "b": 140,
+      "ac": 0.00699,
+      "da": 0.53,
+      "e": 0.729,
+      "h": 0.219,
+      "i": 0,
+      "li": 0.103,
+      "lo": -6.019,
+      "s": 0.0376,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2730e5311993a01fb2e7169f6a7",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e020e5311993a01fb2e7169f6a7",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048510e5311993a01fb2e7169f6a7",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"William Black & Matte - Take Me\" William Black": [
+    {
+      "id": "19m23w2ANVhtB7rApM6pbN",
+      "n": "Back To U",
+      "as": [
+        "SLANDER",
+        "William Black"
+      ],
+      "l": null,
+      "an": "Back To U",
+      "rd": "2020-04-24",
+      "is": true,
+      "ie": true,
+      "d": 214400,
+      "p": 58,
+      "k": "E Major",
+      "kv": 4,
+      "c": "12B",
+      "b": 150,
+      "ac": 0.645,
+      "da": 0.586,
+      "e": 0.499,
+      "h": 0.272,
+      "i": 0,
+      "li": 0.109,
+      "lo": -6.627,
+      "s": 0.049,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273df34234cbad3fca10cda133e",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02df34234cbad3fca10cda133e",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851df34234cbad3fca10cda133e",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1UtRBq2n0IlQNA1WI3axWX",
+      "n": "Deep End",
+      "as": [
+        "William Black"
+      ],
+      "l": null,
+      "an": "Pieces",
+      "rd": "2021-11-05",
+      "is": false,
+      "ie": false,
+      "d": 208421,
+      "p": 53,
+      "k": "F Major",
+      "kv": 5,
+      "c": "7B",
+      "b": 114,
+      "ac": 0.0991,
+      "da": 0.63,
+      "e": 0.706,
+      "h": 0.215,
+      "i": 0,
+      "li": 0.119,
+      "lo": -5.989,
+      "s": 0.0289,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2734cae64780023f5d32c303c0b",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e024cae64780023f5d32c303c0b",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048514cae64780023f5d32c303c0b",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "15OBV0oLTxJvXQtIhBSOCZ",
+      "n": "Keep U Warm (ft. Jordan Shaw)",
+      "as": [
+        "SLANDER",
+        "William Black",
+        "Jordan Shaw"
+      ],
+      "l": null,
+      "an": "Keep U Warm (ft. Jordan Shaw)",
+      "rd": "2024-04-26",
+      "is": true,
+      "ie": false,
+      "d": 222857,
+      "p": 52,
+      "k": "C Major",
+      "kv": 0,
+      "c": "8B",
+      "b": 140,
+      "ac": 0.165,
+      "da": 0.58,
+      "e": 0.772,
+      "h": 0.423,
+      "i": 0,
+      "li": 0.0922,
+      "lo": -5.294,
+      "s": 0.0465,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b27333a26089752295664c5ea69a",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e0233a26089752295664c5ea69a",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000485133a26089752295664c5ea69a",
           "iw": 64,
           "ih": 64
         }
@@ -270,6 +848,432 @@
         },
         {
           "iu": "https://i.scdn.co/image/ab67616d00004851babcb2f14d337632f3f313ef",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Feel Good\" Gryffin": [
+    {
+      "id": "0Ev562zA4pmUsBqjxsxxdx",
+      "n": "Feel Good (with Daya)",
+      "as": [
+        "Gryffin",
+        "ILLENIUM",
+        "Daya"
+      ],
+      "l": null,
+      "an": "Feel Good (with Daya)",
+      "rd": "2017-03-03",
+      "is": true,
+      "ie": false,
+      "d": 248156,
+      "p": 67,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 138,
+      "ac": 0.22,
+      "da": 0.625,
+      "e": 0.707,
+      "h": 0.479,
+      "i": 0,
+      "li": 0.213,
+      "lo": -4.761,
+      "s": 0.0337,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2736362397987db1fbf17f3d9b5",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e026362397987db1fbf17f3d9b5",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048516362397987db1fbf17f3d9b5",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "0aB0v4027ukVziUGwVGYpG",
+      "n": "tv off (feat. lefty gunplay)",
+      "as": [
+        "Kendrick Lamar",
+        "Lefty Gunplay"
+      ],
+      "l": null,
+      "an": "GNX",
+      "rd": "2024-11-22",
+      "is": false,
+      "ie": true,
+      "d": 220690,
+      "p": 94,
+      "k": "F# Minor",
+      "kv": 6,
+      "c": "11A",
+      "b": 100,
+      "ac": 0.0837,
+      "da": 0.855,
+      "e": 0.529,
+      "h": 0.548,
+      "i": 0,
+      "li": 0.423,
+      "lo": -6.679,
+      "s": 0.263,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02d9985092cd88bffd97653b58",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851d9985092cd88bffd97653b58",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "4oe1guqHjDMCYoQguWlNDg",
+      "n": "Dreams",
+      "as": [
+        "Gryffin"
+      ],
+      "l": null,
+      "an": "Dreams",
+      "rd": "2023-03-17",
+      "is": true,
+      "ie": false,
+      "d": 235215,
+      "p": 53,
+      "k": "F Minor",
+      "kv": 5,
+      "c": "4A",
+      "b": 124,
+      "ac": 0.255,
+      "da": 0.655,
+      "e": 0.693,
+      "h": 0.198,
+      "i": 0.00000158,
+      "li": 0.176,
+      "lo": -5.516,
+      "s": 0.077,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273172caac389fadb5f1c7a8416",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02172caac389fadb5f1c7a8416",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851172caac389fadb5f1c7a8416",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Sports car\" Tate McRae": [
+    {
+      "id": "5UJbgR4XF4y1DvbkxEqe8S",
+      "n": "Sports car",
+      "as": [
+        "Tate McRae"
+      ],
+      "l": null,
+      "an": "So Close To What",
+      "rd": "2025-02-20",
+      "is": false,
+      "ie": false,
+      "d": 165045,
+      "p": 88,
+      "k": "B Minor",
+      "kv": 11,
+      "c": "10A",
+      "b": 107,
+      "ac": 0.0505,
+      "da": 0.861,
+      "e": 0.815,
+      "h": 0.886,
+      "i": 0.00139,
+      "li": 0.1,
+      "lo": -3.672,
+      "s": 0.0349,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273ec58cd730a52c5899b947d3e",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02ec58cd730a52c5899b947d3e",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851ec58cd730a52c5899b947d3e",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "3BK1yV08DDjzMu5jVnSciA",
+      "n": "tate mcrae",
+      "as": [
+        "C. Beck"
+      ],
+      "l": null,
+      "an": "tate mcrae",
+      "rd": "2025-02-21",
+      "is": true,
+      "ie": true,
+      "d": 125217,
+      "p": 9,
+      "k": "C Major",
+      "kv": 0,
+      "c": "8B",
+      "b": 138,
+      "ac": 0.032,
+      "da": 0.754,
+      "e": 0.7,
+      "h": 0.505,
+      "i": 0,
+      "li": 0.127,
+      "lo": -5.698,
+      "s": 0.138,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273cd9505d03c535abca3f6f6ec",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02cd9505d03c535abca3f6f6ec",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851cd9505d03c535abca3f6f6ec",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "2zOmS55knKWSgScYPTNmGQ",
+      "n": "Sports car",
+      "as": [
+        "Tate McRae"
+      ],
+      "l": null,
+      "an": "Sports car",
+      "rd": "2025-01-24",
+      "is": true,
+      "ie": false,
+      "d": 165045,
+      "p": 88,
+      "k": "B Minor",
+      "kv": 11,
+      "c": "10A",
+      "b": 107,
+      "ac": 0.0542,
+      "da": 0.863,
+      "e": 0.804,
+      "h": 0.874,
+      "i": 0.000685,
+      "li": 0.0946,
+      "lo": -3.685,
+      "s": 0.0346,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2739064126e1dfd1414f8de9315",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e029064126e1dfd1414f8de9315",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048519064126e1dfd1414f8de9315",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Worst Day\" ILLENIUM & MAX": [
+    {
+      "id": "2cqpniiN33wLMzSuxaIRah",
+      "n": "Worst Day",
+      "as": [
+        "ILLENIUM",
+        "MAX"
+      ],
+      "l": null,
+      "an": "ILLENIUM",
+      "rd": "2023-04-28",
+      "is": false,
+      "ie": false,
+      "d": 167274,
+      "p": 46,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 155,
+      "ac": 0.0698,
+      "da": 0.534,
+      "e": 0.839,
+      "h": 0.576,
+      "i": 0,
+      "li": 0.264,
+      "lo": -2.951,
+      "s": 0.053,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273b1509e7e6067890add82b2ca",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02b1509e7e6067890add82b2ca",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851b1509e7e6067890add82b2ca",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "7MXVkk9YMctZqd1Srtv4MB",
+      "n": "Starboy",
+      "as": [
+        "The Weeknd",
+        "Daft Punk"
+      ],
+      "l": null,
+      "an": "Starboy",
+      "rd": "2016-11-25",
+      "is": false,
+      "ie": true,
+      "d": 230453,
+      "p": 91,
+      "k": "G Major",
+      "kv": 7,
+      "c": "9B",
+      "b": 186,
+      "ac": 0.141,
+      "da": 0.679,
+      "e": 0.587,
+      "h": 0.486,
+      "i": 0.00000635,
+      "li": 0.137,
+      "lo": -7.015,
+      "s": 0.276,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048514718e2b124f79258be7bc452",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "7Bx0oBgnEfVR2bCs6Aul0X",
+      "n": "Worst Day",
+      "as": [
+        "ILLENIUM",
+        "MAX"
+      ],
+      "l": null,
+      "an": "Worst Day",
+      "rd": "2022-10-21",
+      "is": true,
+      "ie": false,
+      "d": 167274,
+      "p": 42,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 155,
+      "ac": 0.0698,
+      "da": 0.534,
+      "e": 0.839,
+      "h": 0.576,
+      "i": 0,
+      "li": 0.264,
+      "lo": -2.951,
+      "s": 0.053,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2736da98e1bc0b1cf520c1ea0e7",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e026da98e1bc0b1cf520c1ea0e7",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048516da98e1bc0b1cf520c1ea0e7",
           "iw": 64,
           "ih": 64
         }
@@ -421,714 +1425,6 @@
       "er": []
     }
   ],
-  "\"Stereo Love\" Edward Maya": [
-    {
-      "id": "1aklRy3btsbucImSXvR2SY",
-      "n": "Stereo Love - Original",
-      "as": [
-        "Edward Maya",
-        "Vika Jigulina"
-      ],
-      "l": null,
-      "an": "Stereo Love",
-      "rd": "2009",
-      "is": true,
-      "ie": false,
-      "d": 248666,
-      "p": 68,
-      "k": "A Major",
-      "kv": 9,
-      "c": "11B",
-      "b": 127,
-      "ac": 0.0392,
-      "da": 0.781,
-      "e": 0.787,
-      "h": 0.341,
-      "i": 0.0127,
-      "li": 0.0745,
-      "lo": -5.358,
-      "s": 0.0383,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273695991d6f4a544a05df4c1c0",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02695991d6f4a544a05df4c1c0",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851695991d6f4a544a05df4c1c0",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "1MYEuXZx1y9lqFnwUU2qOz",
-      "n": "Positive Space",
-      "as": [
-        "Atmosphere",
-        "Slug",
-        "Ant"
-      ],
-      "l": null,
-      "an": "So Many Other Realities Exist Simultaneously",
-      "rd": "2023-05-05",
-      "is": false,
-      "ie": false,
-      "d": 191253,
-      "p": 21,
-      "k": "G Major",
-      "kv": 7,
-      "c": "9B",
-      "b": 75,
-      "ac": 0.624,
-      "da": 0.716,
-      "e": 0.647,
-      "h": 0.648,
-      "i": 0,
-      "li": 0.294,
-      "lo": -10.005,
-      "s": 0.46,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2733f87587fb5f3442db65fd304",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e023f87587fb5f3442db65fd304",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048513f87587fb5f3442db65fd304",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "11Iv8RCFmeImLOpaHYxKb4",
-      "n": "Stereo Love",
-      "as": [
-        "Edward Maya",
-        "Vika Jigulina"
-      ],
-      "l": null,
-      "an": "Stereo Love",
-      "rd": "2009",
-      "is": true,
-      "ie": false,
-      "d": 185120,
-      "p": 71,
-      "k": "A Major",
-      "kv": 9,
-      "c": "11B",
-      "b": 127,
-      "ac": 0.0399,
-      "da": 0.775,
-      "e": 0.726,
-      "h": 0.206,
-      "i": 0.0235,
-      "li": 0.11,
-      "lo": -5.629,
-      "s": 0.0369,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273695991d6f4a544a05df4c1c0",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02695991d6f4a544a05df4c1c0",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851695991d6f4a544a05df4c1c0",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"Sports car\" Tate McRae": [
-    {
-      "id": "5UJbgR4XF4y1DvbkxEqe8S",
-      "n": "Sports car",
-      "as": [
-        "Tate McRae"
-      ],
-      "l": null,
-      "an": "So Close To What",
-      "rd": "2025-02-20",
-      "is": false,
-      "ie": false,
-      "d": 165045,
-      "p": 88,
-      "k": "B Minor",
-      "kv": 11,
-      "c": "10A",
-      "b": 107,
-      "ac": 0.0505,
-      "da": 0.861,
-      "e": 0.815,
-      "h": 0.886,
-      "i": 0.00139,
-      "li": 0.1,
-      "lo": -3.672,
-      "s": 0.0349,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273ec58cd730a52c5899b947d3e",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02ec58cd730a52c5899b947d3e",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851ec58cd730a52c5899b947d3e",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "3BK1yV08DDjzMu5jVnSciA",
-      "n": "tate mcrae",
-      "as": [
-        "C. Beck"
-      ],
-      "l": null,
-      "an": "tate mcrae",
-      "rd": "2025-02-21",
-      "is": true,
-      "ie": true,
-      "d": 125217,
-      "p": 9,
-      "k": "C Major",
-      "kv": 0,
-      "c": "8B",
-      "b": 138,
-      "ac": 0.032,
-      "da": 0.754,
-      "e": 0.7,
-      "h": 0.505,
-      "i": 0,
-      "li": 0.127,
-      "lo": -5.698,
-      "s": 0.138,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273cd9505d03c535abca3f6f6ec",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02cd9505d03c535abca3f6f6ec",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851cd9505d03c535abca3f6f6ec",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "2zOmS55knKWSgScYPTNmGQ",
-      "n": "Sports car",
-      "as": [
-        "Tate McRae"
-      ],
-      "l": null,
-      "an": "Sports car",
-      "rd": "2025-01-24",
-      "is": true,
-      "ie": false,
-      "d": 165045,
-      "p": 88,
-      "k": "B Minor",
-      "kv": 11,
-      "c": "10A",
-      "b": 107,
-      "ac": 0.0542,
-      "da": 0.863,
-      "e": 0.804,
-      "h": 0.874,
-      "i": 0.000685,
-      "li": 0.0946,
-      "lo": -3.685,
-      "s": 0.0346,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2739064126e1dfd1414f8de9315",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e029064126e1dfd1414f8de9315",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048519064126e1dfd1414f8de9315",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"ILLIT - Magnetic\" Foxela": [
-    {
-      "id": "1aKvZDoLGkNMxoRYgkckZG",
-      "n": "Magnetic",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "SUPER REAL ME",
-      "rd": "2024-03-25",
-      "is": true,
-      "ie": false,
-      "d": 160688,
-      "p": 84,
-      "k": "F# Major",
-      "kv": 6,
-      "c": "2B",
-      "b": 131,
-      "ac": 0.257,
-      "da": 0.797,
-      "e": 0.668,
-      "h": 0.69,
-      "i": 0,
-      "li": 0.0876,
-      "lo": -5.819,
-      "s": 0.0687,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273f037c5fb9de6c78726cb8e2c",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02f037c5fb9de6c78726cb8e2c",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851f037c5fb9de6c78726cb8e2c",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "21LtZQQMQYwVIxc9O9Ygq8",
-      "n": "Cherish (My Love)",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "Cherish (My Love) (Remixes)",
-      "rd": "2024-10-28",
-      "is": true,
-      "ie": false,
-      "d": 176854,
-      "p": 76,
-      "k": "E Major",
-      "kv": 4,
-      "c": "12B",
-      "b": 143,
-      "ac": 0.236,
-      "da": 0.714,
-      "e": 0.821,
-      "h": 0.303,
-      "i": 0,
-      "li": 0.164,
-      "lo": -3.835,
-      "s": 0.065,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273be38c944cece32b9978c1b41",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02be38c944cece32b9978c1b41",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851be38c944cece32b9978c1b41",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "0znsc67nMhP4X9hjhvoyeP",
-      "n": "Tick-Tack",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "I'LL LIKE YOU",
-      "rd": "2024-10-21",
-      "is": true,
-      "ie": false,
-      "d": 129468,
-      "p": 79,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 130,
-      "ac": 0.136,
-      "da": 0.867,
-      "e": 0.745,
-      "h": 0.963,
-      "i": 0,
-      "li": 0.0773,
-      "lo": -4.159,
-      "s": 0.0408,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273fc2fffae3025fbc540b98f34",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02fc2fffae3025fbc540b98f34",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851fc2fffae3025fbc540b98f34",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"Better Not\" Louis The Child": [
-    {
-      "id": "7n1940b6kHcaEewFSZXnXa",
-      "n": "Better Not (with Wafia)",
-      "as": [
-        "Louis The Child",
-        "Wafia"
-      ],
-      "l": null,
-      "an": "Kids At Play- EP",
-      "rd": "2018-10-26",
-      "is": true,
-      "ie": false,
-      "d": 222865,
-      "p": 64,
-      "k": "A Major",
-      "kv": 9,
-      "c": "11B",
-      "b": 114,
-      "ac": 0.278,
-      "da": 0.783,
-      "e": 0.537,
-      "h": 0.393,
-      "i": 0,
-      "li": 0.229,
-      "lo": -2.921,
-      "s": 0.0795,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b27353c069027efd7447798e844d",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e0253c069027efd7447798e844d",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000485153c069027efd7447798e844d",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "4AEzAEnbm9uRgbmTdeI63K",
-      "n": "MIDDLE CHILD",
-      "as": [
-        "PnB Rock",
-        "XXXTENTACION"
-      ],
-      "l": null,
-      "an": "TrapStar Turnt PopStar",
-      "rd": "2019-05-02",
-      "is": false,
-      "ie": true,
-      "d": 151574,
-      "p": 59,
-      "k": "C Major",
-      "kv": 0,
-      "c": "8B",
-      "b": 152,
-      "ac": 0.137,
-      "da": 0.75,
-      "e": 0.567,
-      "h": 0.398,
-      "i": 0,
-      "li": 0.109,
-      "lo": -6.4,
-      "s": 0.48,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273aaed5e3d5768ee00f07003bf",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02aaed5e3d5768ee00f07003bf",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851aaed5e3d5768ee00f07003bf",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "1nMKEA5cstslumoTJMVjIu",
-      "n": "Slow Down Love (feat. Chelsea Cutler)",
-      "as": [
-        "Louis The Child",
-        "Chelsea Cutler"
-      ],
-      "l": null,
-      "an": "Love Is Alive",
-      "rd": "2017-03-24",
-      "is": true,
-      "ie": false,
-      "d": 157891,
-      "p": 55,
-      "k": "B Minor",
-      "kv": 11,
-      "c": "10A",
-      "b": 128,
-      "ac": 0.556,
-      "da": 0.639,
-      "e": 0.59,
-      "h": 0.287,
-      "i": 0.0000338,
-      "li": 0.208,
-      "lo": -7.752,
-      "s": 0.352,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b27359c8c7c3b8212ac8e35b9911",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e0259c8c7c3b8212ac8e35b9911",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000485159c8c7c3b8212ac8e35b9911",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"newjeans - right now\" h4rdy": [
-    {
-      "id": "6vP1IEmUdgJX4zdWxUnsOs",
-      "n": "all2me",
-      "as": [
-        "wenszy"
-      ],
-      "l": null,
-      "an": "all2me",
-      "rd": "2023-12-23",
-      "is": true,
-      "ie": false,
-      "d": 146132,
-      "p": 43,
-      "k": "F# Minor",
-      "kv": 6,
-      "c": "11A",
-      "b": 138,
-      "ac": 0.00178,
-      "da": 0.503,
-      "e": 0.851,
-      "h": 0.468,
-      "i": 0.00000136,
-      "li": 0.391,
-      "lo": -5.487,
-      "s": 0.0674,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273170dd371107627777bb3cf05",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02170dd371107627777bb3cf05",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851170dd371107627777bb3cf05",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "5ocSQW5sIUIOFojwXEz9Ki",
-      "n": "Supernatural",
-      "as": [
-        "NewJeans"
-      ],
-      "l": null,
-      "an": "Supernatural",
-      "rd": "2024-06-21",
-      "is": true,
-      "ie": false,
-      "d": 191000,
-      "p": 77,
-      "k": "B♭ Minor",
-      "kv": 10,
-      "c": "3A",
-      "b": 109,
-      "ac": 0.185,
-      "da": 0.699,
-      "e": 0.708,
-      "h": 0.863,
-      "i": 0.00000843,
-      "li": 0.0921,
-      "lo": -4.182,
-      "s": 0.0496,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2737e1eeb0d7cc374a168369c80",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e027e1eeb0d7cc374a168369c80",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048517e1eeb0d7cc374a168369c80",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "5pZU5qGHd7ihaQQ3QBIHu4",
-      "n": "treat me right - sped up",
-      "as": [
-        "kimmyt",
-        "Grioten"
-      ],
-      "l": null,
-      "an": "treat me right",
-      "rd": "2024-07-12",
-      "is": true,
-      "ie": false,
-      "d": 116040,
-      "p": 14,
-      "k": "C# Major",
-      "kv": 1,
-      "c": "3B",
-      "b": 165,
-      "ac": 0.334,
-      "da": 0.757,
-      "e": 0.504,
-      "h": 0.576,
-      "i": 0,
-      "li": 0.131,
-      "lo": -7.178,
-      "s": 0.204,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2731b7ae25723645a65c31395e4",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e021b7ae25723645a65c31395e4",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048511b7ae25723645a65c31395e4",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
   "\"Levels\" Avicii": [
     {
       "id": "5UqCQaDshqbIk3pkhy4Pjg",
@@ -1269,46 +1565,46 @@
       "er": []
     }
   ],
-  "\"newjeans - omg\" h4rdy": [
+  "\"newjeans - right now\" h4rdy": [
     {
-      "id": "2RK1UvtDYf7a6Pqp79O5WQ",
-      "n": "my melody",
+      "id": "2V9jA1BXbMQwXBeRzGUOOX",
+      "n": "Joey Clipstar (Freestyle)",
       "as": [
-        "YungLex",
-        "kid sora"
+        "Kiz",
+        "Hardest Bars"
       ],
       "l": null,
-      "an": "sanrio girl",
-      "rd": "2025-01-17",
+      "an": "Don't Be Silly",
+      "rd": "2025-04-17",
       "is": true,
-      "ie": false,
-      "d": 84972,
-      "p": 22,
-      "k": "C# Major",
-      "kv": 1,
-      "c": "3B",
-      "b": 185,
-      "ac": 0.0138,
-      "da": 0.624,
-      "e": 0.858,
-      "h": 0.279,
+      "ie": true,
+      "d": 148732,
+      "p": 1,
+      "k": "C Major",
+      "kv": 0,
+      "c": "8B",
+      "b": 142,
+      "ac": 0.415,
+      "da": 0.874,
+      "e": 0.601,
+      "h": 0.662,
       "i": 0,
-      "li": 0.296,
-      "lo": -6.575,
-      "s": 0.106,
+      "li": 0.0817,
+      "lo": -11.263,
+      "s": 0.328,
       "ci": [
         {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2734f4f2ac3d1722785578ed8b7",
+          "iu": "https://i.scdn.co/image/ab67616d0000b273922855808dfabfebacfc38b5",
           "iw": 640,
           "ih": 640
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00001e024f4f2ac3d1722785578ed8b7",
+          "iu": "https://i.scdn.co/image/ab67616d00001e02922855808dfabfebacfc38b5",
           "iw": 300,
           "ih": 300
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d000048514f4f2ac3d1722785578ed8b7",
+          "iu": "https://i.scdn.co/image/ab67616d00004851922855808dfabfebacfc38b5",
           "iw": 64,
           "ih": 64
         }
@@ -1318,43 +1614,43 @@
       "er": []
     },
     {
-      "id": "65FftemJ1DbbZ45DUfHJXE",
-      "n": "OMG",
+      "id": "56v8WEnGzLByGsDAXDiv4d",
+      "n": "ETA",
       "as": [
         "NewJeans"
       ],
       "l": null,
-      "an": "NewJeans 'OMG'",
-      "rd": "2023-01-02",
+      "an": "NewJeans 2nd EP 'Get Up'",
+      "rd": "2023-07-21",
       "is": true,
       "ie": false,
-      "d": 212253,
-      "p": 80,
-      "k": "A Minor",
-      "kv": 9,
-      "c": "8A",
-      "b": 127,
-      "ac": 0.357,
-      "da": 0.804,
-      "e": 0.771,
-      "h": 0.739,
-      "i": 0.00000307,
-      "li": 0.108,
-      "lo": -4.067,
-      "s": 0.0433,
+      "d": 151373,
+      "p": 78,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 135,
+      "ac": 0.108,
+      "da": 0.812,
+      "e": 0.749,
+      "h": 0.841,
+      "i": 0,
+      "li": 0.0599,
+      "lo": -6.389,
+      "s": 0.0397,
       "ci": [
         {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273d70036292d54f29e8b68ec01",
+          "iu": "https://i.scdn.co/image/ab67616d0000b2730744690248ef3ba7b776ea7b",
           "iw": 640,
           "ih": 640
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02d70036292d54f29e8b68ec01",
+          "iu": "https://i.scdn.co/image/ab67616d00001e020744690248ef3ba7b776ea7b",
           "iw": 300,
           "ih": 300
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00004851d70036292d54f29e8b68ec01",
+          "iu": "https://i.scdn.co/image/ab67616d000048510744690248ef3ba7b776ea7b",
           "iw": 64,
           "ih": 64
         }
@@ -1364,44 +1660,614 @@
       "er": []
     },
     {
-      "id": "4vUf3QbODUJxb8slk77Y90",
-      "n": "treat me right",
+      "id": "4f5TKGvkD4TkTjr61GKNAG",
+      "n": "Eurovision (feat. Rondodasosa, Baby Gang, A2 Anti, Morad, Beny Jr, Ashe 22 & Freeze corleone)",
       "as": [
-        "kimmyt",
-        "Grioten"
+        "Central Cee",
+        "Rondodasosa",
+        "Freeze corleone",
+        "Baby Gang",
+        "A2ANTI",
+        "Morad",
+        "Beny Jr",
+        "ASHE 22"
       ],
       "l": null,
-      "an": "treat me right",
-      "rd": "2024-07-12",
-      "is": true,
-      "ie": false,
-      "d": 126106,
-      "p": 24,
-      "k": "C Major",
-      "kv": 0,
-      "c": "8B",
-      "b": 152,
-      "ac": 0.257,
-      "da": 0.773,
-      "e": 0.462,
-      "h": 0.499,
+      "an": "23",
+      "rd": "2022-02-25",
+      "is": false,
+      "ie": true,
+      "d": 243776,
+      "p": 69,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 144,
+      "ac": 0.22,
+      "da": 0.741,
+      "e": 0.735,
+      "h": 0.737,
       "i": 0,
-      "li": 0.135,
-      "lo": -7.343,
-      "s": 0.0664,
+      "li": 0.185,
+      "lo": -6.511,
+      "s": 0.299,
       "ci": [
         {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2731b7ae25723645a65c31395e4",
+          "iu": "https://i.scdn.co/image/ab67616d0000b273e1f05c994777b79bc5c87547",
           "iw": 640,
           "ih": 640
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d00001e021b7ae25723645a65c31395e4",
+          "iu": "https://i.scdn.co/image/ab67616d00001e02e1f05c994777b79bc5c87547",
           "iw": 300,
           "ih": 300
         },
         {
-          "iu": "https://i.scdn.co/image/ab67616d000048511b7ae25723645a65c31395e4",
+          "iu": "https://i.scdn.co/image/ab67616d00004851e1f05c994777b79bc5c87547",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Stereo Love\" Edward Maya": [
+    {
+      "id": "2QitlbyyHKHIy7ooUz0PUZ",
+      "n": "Unknown Love",
+      "as": [
+        "Jeff Mailfert"
+      ],
+      "l": null,
+      "an": "Unknown Love",
+      "rd": "2023-08-11",
+      "is": true,
+      "ie": false,
+      "d": 210000,
+      "p": 6,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 106,
+      "ac": 0.272,
+      "da": 0.611,
+      "e": 0.386,
+      "h": 0.147,
+      "i": 0.0000129,
+      "li": 0.0838,
+      "lo": -12.506,
+      "s": 0.0305,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273d59f66622c8b9658439c13ec",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02d59f66622c8b9658439c13ec",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851d59f66622c8b9658439c13ec",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1aklRy3btsbucImSXvR2SY",
+      "n": "Stereo Love - Original",
+      "as": [
+        "Edward Maya",
+        "Vika Jigulina"
+      ],
+      "l": null,
+      "an": "Stereo Love",
+      "rd": "2009",
+      "is": true,
+      "ie": false,
+      "d": 248666,
+      "p": 68,
+      "k": "A Major",
+      "kv": 9,
+      "c": "11B",
+      "b": 127,
+      "ac": 0.0392,
+      "da": 0.781,
+      "e": 0.787,
+      "h": 0.341,
+      "i": 0.0127,
+      "li": 0.0745,
+      "lo": -5.358,
+      "s": 0.0383,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273695991d6f4a544a05df4c1c0",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02695991d6f4a544a05df4c1c0",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851695991d6f4a544a05df4c1c0",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "08eetqe5N8mFQyPUM46ddX",
+      "n": "Unknown Love",
+      "as": [
+        "Jeff Mailfert"
+      ],
+      "l": null,
+      "an": "Wooden Rhapsody",
+      "rd": "2023-11-10",
+      "is": true,
+      "ie": false,
+      "d": 210000,
+      "p": 0,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 106,
+      "ac": 0.272,
+      "da": 0.611,
+      "e": 0.386,
+      "h": 0.147,
+      "i": 0.0000129,
+      "li": 0.0838,
+      "lo": -12.506,
+      "s": 0.0305,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b27394b6689cf9bf54ccb9a9c488",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e0294b6689cf9bf54ccb9a9c488",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000485194b6689cf9bf54ccb9a9c488",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"Better Not\" Louis The Child": [
+    {
+      "id": "5Y87Aek2DGI5s4WNAh8zKR",
+      "n": "502 Come Up",
+      "as": [
+        "Bryson Tiller"
+      ],
+      "l": null,
+      "an": "T R A P S O U L",
+      "rd": "2015-10-02",
+      "is": false,
+      "ie": true,
+      "d": 196106,
+      "p": 52,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 119,
+      "ac": 0.192,
+      "da": 0.59,
+      "e": 0.66,
+      "h": 0.418,
+      "i": 0,
+      "li": 0.108,
+      "lo": -5.559,
+      "s": 0.11,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273d5f3cea8affdca01a0dc754f",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02d5f3cea8affdca01a0dc754f",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851d5f3cea8affdca01a0dc754f",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1nMKEA5cstslumoTJMVjIu",
+      "n": "Slow Down Love (feat. Chelsea Cutler)",
+      "as": [
+        "Louis The Child",
+        "Chelsea Cutler"
+      ],
+      "l": null,
+      "an": "Love Is Alive",
+      "rd": "2017-03-24",
+      "is": true,
+      "ie": false,
+      "d": 157891,
+      "p": 55,
+      "k": "B Minor",
+      "kv": 11,
+      "c": "10A",
+      "b": 128,
+      "ac": 0.556,
+      "da": 0.639,
+      "e": 0.59,
+      "h": 0.287,
+      "i": 0.0000338,
+      "li": 0.208,
+      "lo": -7.752,
+      "s": 0.352,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b27359c8c7c3b8212ac8e35b9911",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e0259c8c7c3b8212ac8e35b9911",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000485159c8c7c3b8212ac8e35b9911",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "7nP8jrKvubPXbVHE52OPdo",
+      "n": "Redbone (with GloRilla)",
+      "as": [
+        "Lil Baby",
+        "GloRilla"
+      ],
+      "l": null,
+      "an": "WHAM (Extended Version)",
+      "rd": "2025-01-10",
+      "is": false,
+      "ie": true,
+      "d": 132000,
+      "p": 65,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 154,
+      "ac": 0.00163,
+      "da": 0.682,
+      "e": 0.479,
+      "h": 0.0955,
+      "i": 0,
+      "li": 0.338,
+      "lo": -7.966,
+      "s": 0.373,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b27326cc3037de434f6c1a62824f",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e0226cc3037de434f6c1a62824f",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000485126cc3037de434f6c1a62824f",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"ILLIT - Magnetic\" Foxela": [
+    {
+      "id": "1aKvZDoLGkNMxoRYgkckZG",
+      "n": "Magnetic",
+      "as": [
+        "ILLIT"
+      ],
+      "l": null,
+      "an": "SUPER REAL ME",
+      "rd": "2024-03-25",
+      "is": true,
+      "ie": false,
+      "d": 160688,
+      "p": 84,
+      "k": "F# Major",
+      "kv": 6,
+      "c": "2B",
+      "b": 131,
+      "ac": 0.257,
+      "da": 0.797,
+      "e": 0.668,
+      "h": 0.69,
+      "i": 0,
+      "li": 0.0876,
+      "lo": -5.819,
+      "s": 0.0687,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273f037c5fb9de6c78726cb8e2c",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02f037c5fb9de6c78726cb8e2c",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851f037c5fb9de6c78726cb8e2c",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1SNbKSraeBuFBuHeSpHLis",
+      "n": "Magnetic (Starlight Remix)",
+      "as": [
+        "ILLIT"
+      ],
+      "l": null,
+      "an": "Magnetic (Remixes)",
+      "rd": "2024-04-19",
+      "is": true,
+      "ie": false,
+      "d": 168778,
+      "p": 53,
+      "k": "F# Major",
+      "kv": 6,
+      "c": "2B",
+      "b": 131,
+      "ac": 0.104,
+      "da": 0.793,
+      "e": 0.725,
+      "h": 0.902,
+      "i": 0.00393,
+      "li": 0.0611,
+      "lo": -4.283,
+      "s": 0.0653,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273465aad6d3be0d66b9fa93bb6",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02465aad6d3be0d66b9fa93bb6",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851465aad6d3be0d66b9fa93bb6",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "0znsc67nMhP4X9hjhvoyeP",
+      "n": "Tick-Tack",
+      "as": [
+        "ILLIT"
+      ],
+      "l": null,
+      "an": "I'LL LIKE YOU",
+      "rd": "2024-10-21",
+      "is": true,
+      "ie": false,
+      "d": 129468,
+      "p": 79,
+      "k": "D Major",
+      "kv": 2,
+      "c": "10B",
+      "b": 130,
+      "ac": 0.136,
+      "da": 0.867,
+      "e": 0.745,
+      "h": 0.963,
+      "i": 0,
+      "li": 0.0773,
+      "lo": -4.159,
+      "s": 0.0408,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273fc2fffae3025fbc540b98f34",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02fc2fffae3025fbc540b98f34",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851fc2fffae3025fbc540b98f34",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
+  "\"S&M\" Rihanna": [
+    {
+      "id": "29ZXwWOOLz9t5fa3eT3i7T",
+      "n": "223's (feat. 9lokknine)",
+      "as": [
+        "YNW Melly",
+        "9lokknine"
+      ],
+      "l": null,
+      "an": "Melly vs. Melvin",
+      "rd": "2019-11-22",
+      "is": false,
+      "ie": true,
+      "d": 176640,
+      "p": 74,
+      "k": "C Minor",
+      "kv": 0,
+      "c": "5A",
+      "b": 95,
+      "ac": 0.0388,
+      "da": 0.932,
+      "e": 0.547,
+      "h": 0.695,
+      "i": 0,
+      "li": 0.0924,
+      "lo": -7.787,
+      "s": 0.333,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2730f47d89f02cd58a168b8193e",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e020f47d89f02cd58a168b8193e",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048510f47d89f02cd58a168b8193e",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "1ApKMc4Rbzb77dqpcYMY0s",
+      "n": "22 Samurai",
+      "as": [
+        "RUDE"
+      ],
+      "l": null,
+      "an": "Eternal Youth",
+      "rd": "2017-08-07",
+      "is": false,
+      "ie": false,
+      "d": 176222,
+      "p": 43,
+      "k": "B♭ Minor",
+      "kv": 10,
+      "c": "3A",
+      "b": 90,
+      "ac": 0.229,
+      "da": 0.686,
+      "e": 0.557,
+      "h": 0.236,
+      "i": 0.904,
+      "li": 0.328,
+      "lo": -9.951,
+      "s": 0.0992,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273097f3d06dd8726a91f526e21",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02097f3d06dd8726a91f526e21",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851097f3d06dd8726a91f526e21",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "3yII7UwgLF6K5zW3xad3MP",
+      "n": "22 (Taylor's Version)",
+      "as": [
+        "Taylor Swift"
+      ],
+      "l": null,
+      "an": "Red (Taylor's Version)",
+      "rd": "2021-11-12",
+      "is": false,
+      "ie": false,
+      "d": 230960,
+      "p": 74,
+      "k": "G Major",
+      "kv": 7,
+      "c": "9B",
+      "b": 104,
+      "ac": 0.000443,
+      "da": 0.642,
+      "e": 0.695,
+      "h": 0.642,
+      "i": 0.0000102,
+      "li": 0.0753,
+      "lo": -5.62,
+      "s": 0.0281,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273318443aab3531a0558e79a4d",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02318443aab3531a0558e79a4d",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851318443aab3531a0558e79a4d",
           "iw": 64,
           "ih": 64
         }
@@ -1551,6 +2417,148 @@
       "er": []
     }
   ],
+  "\"newjeans - omg\" h4rdy": [
+    {
+      "id": "2RK1UvtDYf7a6Pqp79O5WQ",
+      "n": "my melody",
+      "as": [
+        "YungLex",
+        "kid sora"
+      ],
+      "l": null,
+      "an": "sanrio girl",
+      "rd": "2025-01-17",
+      "is": true,
+      "ie": false,
+      "d": 84972,
+      "p": 22,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 185,
+      "ac": 0.0138,
+      "da": 0.624,
+      "e": 0.858,
+      "h": 0.279,
+      "i": 0,
+      "li": 0.296,
+      "lo": -6.575,
+      "s": 0.106,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2734f4f2ac3d1722785578ed8b7",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e024f4f2ac3d1722785578ed8b7",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048514f4f2ac3d1722785578ed8b7",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "65FftemJ1DbbZ45DUfHJXE",
+      "n": "OMG",
+      "as": [
+        "NewJeans"
+      ],
+      "l": null,
+      "an": "NewJeans 'OMG'",
+      "rd": "2023-01-02",
+      "is": true,
+      "ie": false,
+      "d": 212253,
+      "p": 80,
+      "k": "A Minor",
+      "kv": 9,
+      "c": "8A",
+      "b": 127,
+      "ac": 0.357,
+      "da": 0.804,
+      "e": 0.771,
+      "h": 0.739,
+      "i": 0.00000307,
+      "li": 0.108,
+      "lo": -4.067,
+      "s": 0.0433,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b273d70036292d54f29e8b68ec01",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e02d70036292d54f29e8b68ec01",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00004851d70036292d54f29e8b68ec01",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    },
+    {
+      "id": "5pZU5qGHd7ihaQQ3QBIHu4",
+      "n": "treat me right - sped up",
+      "as": [
+        "kimmyt",
+        "Grioten"
+      ],
+      "l": null,
+      "an": "treat me right",
+      "rd": "2024-07-12",
+      "is": true,
+      "ie": false,
+      "d": 116040,
+      "p": 14,
+      "k": "C# Major",
+      "kv": 1,
+      "c": "3B",
+      "b": 165,
+      "ac": 0.334,
+      "da": 0.757,
+      "e": 0.504,
+      "h": 0.576,
+      "i": 0,
+      "li": 0.131,
+      "lo": -7.178,
+      "s": 0.204,
+      "ci": [
+        {
+          "iu": "https://i.scdn.co/image/ab67616d0000b2731b7ae25723645a65c31395e4",
+          "iw": 640,
+          "ih": 640
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d00001e021b7ae25723645a65c31395e4",
+          "iw": 300,
+          "ih": 300
+        },
+        {
+          "iu": "https://i.scdn.co/image/ab67616d000048511b7ae25723645a65c31395e4",
+          "iw": 64,
+          "ih": 64
+        }
+      ],
+      "cr": null,
+      "r": [],
+      "er": []
+    }
+  ],
   "\"lesserafim - perfect night\" h4rdy": [
     {
       "id": "74X2u8JMVooG2QbjRxXwR8",
@@ -1564,7 +2572,7 @@
       "is": true,
       "ie": false,
       "d": 159080,
-      "p": 79,
+      "p": 80,
       "k": "F Major",
       "kv": 5,
       "c": "7B",
@@ -1826,570 +2834,6 @@
         },
         {
           "iu": "https://i.scdn.co/image/ab67616d00004851e7e0c6960601d32e6bc6150b",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"dancinwithsomebawdy\" ericdoa": [
-    {
-      "id": "5v7oj9PosKdE39x9uwDs6C",
-      "n": "dancinwithsomebawdy",
-      "as": [
-        "ericdoa"
-      ],
-      "l": null,
-      "an": "DOA",
-      "rd": "2024-01-19",
-      "is": false,
-      "ie": true,
-      "d": 143319,
-      "p": 58,
-      "k": "A Minor",
-      "kv": 9,
-      "c": "8A",
-      "b": 128,
-      "ac": 0.00394,
-      "da": 0.737,
-      "e": 0.705,
-      "h": 0.663,
-      "i": 0,
-      "li": 0.294,
-      "lo": -4.864,
-      "s": 0.0764,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2731c615ec4f5dd17806a802162",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e021c615ec4f5dd17806a802162",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048511c615ec4f5dd17806a802162",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "2NXtYnEeJbRQ3pqngPCHYO",
-      "n": "song for when the bar closes",
-      "as": [
-        "ericdoa"
-      ],
-      "l": null,
-      "an": "song for when the bar closes",
-      "rd": "2024-11-19",
-      "is": true,
-      "ie": true,
-      "d": 104897,
-      "p": 49,
-      "k": "C# Major",
-      "kv": 1,
-      "c": "3B",
-      "b": 147,
-      "ac": 0.000461,
-      "da": 0.673,
-      "e": 0.583,
-      "h": 0.3,
-      "i": 0.00443,
-      "li": 0.296,
-      "lo": -5.451,
-      "s": 0.046,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2733e3f1f9b2a8708278d8c4b8a",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e023e3f1f9b2a8708278d8c4b8a",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048513e3f1f9b2a8708278d8c4b8a",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "37BGNR4YFOuq72tGwZUOMd",
-      "n": "imcoolimgoodimstraight",
-      "as": [
-        "ericdoa"
-      ],
-      "l": null,
-      "an": "DOA",
-      "rd": "2024-01-19",
-      "is": false,
-      "ie": false,
-      "d": 139791,
-      "p": 47,
-      "k": "C# Major",
-      "kv": 1,
-      "c": "3B",
-      "b": 147,
-      "ac": 0.00768,
-      "da": 0.688,
-      "e": 0.787,
-      "h": 0.851,
-      "i": 0,
-      "li": 0.147,
-      "lo": -4.691,
-      "s": 0.0504,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b2731c615ec4f5dd17806a802162",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e021c615ec4f5dd17806a802162",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d000048511c615ec4f5dd17806a802162",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"Feel It\" d4vd": [
-    {
-      "id": "3SAga35lAPYdjj3qyfEsCF",
-      "n": "Feel It - From “Invincible”",
-      "as": [
-        "d4vd"
-      ],
-      "l": null,
-      "an": "Feel It (From “Invincible”)",
-      "rd": "2024-03-28",
-      "is": true,
-      "ie": false,
-      "d": 157974,
-      "p": 91,
-      "k": "A♭ Major",
-      "kv": 8,
-      "c": "4B",
-      "b": 121,
-      "ac": 0.0288,
-      "da": 0.565,
-      "e": 0.593,
-      "h": 0.429,
-      "i": 0,
-      "li": 0.215,
-      "lo": -5.864,
-      "s": 0.0883,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273a9da992c2ef398245027d654",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02a9da992c2ef398245027d654",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851a9da992c2ef398245027d654",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "2u9S9JJ6hTZS3Vf22HOZKg",
-      "n": "NOKIA",
-      "as": [
-        "Drake"
-      ],
-      "l": null,
-      "an": "$ome $exy $ongs 4 U",
-      "rd": "2025-02-14",
-      "is": false,
-      "ie": true,
-      "d": 241023,
-      "p": 94,
-      "k": "F Major",
-      "kv": 5,
-      "c": "7B",
-      "b": 106,
-      "ac": 0.247,
-      "da": 0.537,
-      "e": 0.727,
-      "h": 0.508,
-      "i": 0,
-      "li": 0.173,
-      "lo": -4.184,
-      "s": 0.15,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273cc392813bfd8f63d4d5f4a95",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02cc392813bfd8f63d4d5f4a95",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851cc392813bfd8f63d4d5f4a95",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "6BQPRUFGHsgtNYJxuwhktR",
-      "n": "This Is How It Feels (with Laufey)",
-      "as": [
-        "d4vd",
-        "Laufey"
-      ],
-      "l": null,
-      "an": "Petals to Thorns",
-      "rd": "2023-05-26",
-      "is": true,
-      "ie": false,
-      "d": 284305,
-      "p": 74,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 83,
-      "ac": 0.927,
-      "da": 0.235,
-      "e": 0.217,
-      "h": 0.221,
-      "i": 0,
-      "li": 0.163,
-      "lo": -11.72,
-      "s": 0.0342,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b27364fa1bda999f4fbd2b7c4bb7",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e0264fa1bda999f4fbd2b7c4bb7",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000485164fa1bda999f4fbd2b7c4bb7",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"Magnetic\" ILLIT": [
-    {
-      "id": "1aKvZDoLGkNMxoRYgkckZG",
-      "n": "Magnetic",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "SUPER REAL ME",
-      "rd": "2024-03-25",
-      "is": true,
-      "ie": false,
-      "d": 160688,
-      "p": 84,
-      "k": "F# Major",
-      "kv": 6,
-      "c": "2B",
-      "b": 131,
-      "ac": 0.257,
-      "da": 0.797,
-      "e": 0.668,
-      "h": 0.69,
-      "i": 0,
-      "li": 0.0876,
-      "lo": -5.819,
-      "s": 0.0687,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273f037c5fb9de6c78726cb8e2c",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02f037c5fb9de6c78726cb8e2c",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851f037c5fb9de6c78726cb8e2c",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "1SNbKSraeBuFBuHeSpHLis",
-      "n": "Magnetic (Starlight Remix)",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "Magnetic (Remixes)",
-      "rd": "2024-04-19",
-      "is": true,
-      "ie": false,
-      "d": 168778,
-      "p": 53,
-      "k": "F# Major",
-      "kv": 6,
-      "c": "2B",
-      "b": 131,
-      "ac": 0.104,
-      "da": 0.793,
-      "e": 0.725,
-      "h": 0.902,
-      "i": 0.00393,
-      "li": 0.0611,
-      "lo": -4.283,
-      "s": 0.0653,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273465aad6d3be0d66b9fa93bb6",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02465aad6d3be0d66b9fa93bb6",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851465aad6d3be0d66b9fa93bb6",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "0znsc67nMhP4X9hjhvoyeP",
-      "n": "Tick-Tack",
-      "as": [
-        "ILLIT"
-      ],
-      "l": null,
-      "an": "I'LL LIKE YOU",
-      "rd": "2024-10-21",
-      "is": true,
-      "ie": false,
-      "d": 129468,
-      "p": 79,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 130,
-      "ac": 0.136,
-      "da": 0.867,
-      "e": 0.745,
-      "h": 0.963,
-      "i": 0,
-      "li": 0.0773,
-      "lo": -4.159,
-      "s": 0.0408,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273fc2fffae3025fbc540b98f34",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02fc2fffae3025fbc540b98f34",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851fc2fffae3025fbc540b98f34",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    }
-  ],
-  "\"John Summit venbee - palm of my hands\" John Summit": [
-    {
-      "id": "2vxsdAnntt6eGZJJRaLBF6",
-      "n": "palm of my hands - Odd Mob Remix",
-      "as": [
-        "John Summit",
-        "Odd Mob",
-        "venbee"
-      ],
-      "l": null,
-      "an": "palm of my hands (Odd Mob Remix)",
-      "rd": "2024-11-08",
-      "is": true,
-      "ie": true,
-      "d": 203636,
-      "p": 66,
-      "k": "B♭ Minor",
-      "kv": 10,
-      "c": "3A",
-      "b": 132,
-      "ac": 0.00273,
-      "da": 0.823,
-      "e": 0.908,
-      "h": 0.554,
-      "i": 0.0838,
-      "li": 0.0754,
-      "lo": -4.07,
-      "s": 0.0526,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273008666415b2bd8010fb2247e",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02008666415b2bd8010fb2247e",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851008666415b2bd8010fb2247e",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "17yEueJZhkmMlfWof9Yskf",
-      "n": "Cold Shower Tuesdays",
-      "as": [
-        "Bowling For Soup"
-      ],
-      "l": null,
-      "an": "Drunk Enough To Dance",
-      "rd": "2002",
-      "is": false,
-      "ie": false,
-      "d": 214173,
-      "p": 24,
-      "k": "D Major",
-      "kv": 2,
-      "c": "10B",
-      "b": 100,
-      "ac": 0.000674,
-      "da": 0.517,
-      "e": 0.961,
-      "h": 0.539,
-      "i": 0.00000377,
-      "li": 0.326,
-      "lo": -5.213,
-      "s": 0.0436,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b27397ed7b212715424daac8c600",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e0297ed7b212715424daac8c600",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000485197ed7b212715424daac8c600",
-          "iw": 64,
-          "ih": 64
-        }
-      ],
-      "cr": null,
-      "r": [],
-      "er": []
-    },
-    {
-      "id": "6y5HLopYu7Uu0hYwVBj4T6",
-      "n": "palm of my hands",
-      "as": [
-        "John Summit",
-        "venbee"
-      ],
-      "l": null,
-      "an": "Comfort In Chaos",
-      "rd": "2024-07-12",
-      "is": false,
-      "ie": true,
-      "d": 131294,
-      "p": 52,
-      "k": "C# Minor",
-      "kv": 1,
-      "c": "12A",
-      "b": 170,
-      "ac": 0.183,
-      "da": 0.598,
-      "e": 0.909,
-      "h": 0.188,
-      "i": 0.254,
-      "li": 0.643,
-      "lo": -5.363,
-      "s": 0.0653,
-      "ci": [
-        {
-          "iu": "https://i.scdn.co/image/ab67616d0000b273ac2be70b09319ac92b074fde",
-          "iw": 640,
-          "ih": 640
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00001e02ac2be70b09319ac92b074fde",
-          "iw": 300,
-          "ih": 300
-        },
-        {
-          "iu": "https://i.scdn.co/image/ab67616d00004851ac2be70b09319ac92b074fde",
           "iw": 64,
           "ih": 64
         }
