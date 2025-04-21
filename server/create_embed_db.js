@@ -24,7 +24,7 @@ const TAGS_FILE = path.join(__dirname, "../data/track_tags.csv");
 
 // Ensure output directories
 const dataDir = path.dirname(CSV_FILE);
-if (!fs.existsSync(dataDir)) {
+if (!fs.existsSync(dataDir)) {  
     fs.mkdirSync(dataDir, { recursive: true });
 }
 
@@ -36,7 +36,7 @@ if (fs.existsSync(CACHE_FILE)) {
 // Write CSV rows
 function writeCSV(data, isFirstWrite = false) {
     const headers = [
-        "Title", "Artist", "Album", "ReleaseDate", "ID", "Key", "BPM", 
+        "Title", "Artist", "Album", "Camelot", "ReleaseDate", "ID", "Key", "BPM", 
         "Acousticness", "Popularity", "Happiness", "Danceability", 
         "Instrumentalness", "Energy", "Speechiness", "Loudness", "Cover"
     ];
@@ -45,6 +45,7 @@ function writeCSV(data, isFirstWrite = false) {
         `"${result.n.replace(/"/g, '""')}"`,
         `"${Array.isArray(result.as) ? result.as.join(', ') : result.as}"`,
         `"${result.an.replace(/"/g, '""')}"`,
+        result.c,
         result.rd, result.id, result.k, result.b, result.ac, 
         result.p, result.h, result.da, result.i, result.e, 
         result.s, result.lo,
@@ -62,11 +63,12 @@ function cleanTitle(title) {
         .replace(/\[.*?\]/g, '')
         .replace(/feat\..*/i, '')
         .replace(/ft\..*/i, '')
+        .replace(/,/g, '')  // remove commas
         .trim();
 }
 
 function cleanArtist(artist) {
-    return artist.split(",")[0].trim();
+    return artist.replace(/,/g, '').trim();
 }
 
 // Song searcher
@@ -165,7 +167,7 @@ async function embedTagsFromCache() {
                     tags = await fetchArtistTags(artist);
                     console.log(tags)
                 }
-                return `${id},${artist},"${track}","${tags}"`;
+                return `"${id}","${artist}","${track}","${tags.replace(/"/g, '""')}"`;
             }));
         }
     }
