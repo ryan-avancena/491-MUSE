@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/stars.js') }}"></script>
     <title>MUSE</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         <button>start session</button>
     </a> -->
 
-    <div id="loading-bar" style="display: none; height: 4px; background: yellow; width: 0%; transition: width 0.4s;"></div>
+    <!-- <div id="loading-bar" style="display: none; height: 4px; background: yellow; width: 0%; transition: width 0.4s;"></div> -->
 
     <form id="soundcloud-form" action="/submit-soundcloud" method="POST">
         <div class="input-wrapper">

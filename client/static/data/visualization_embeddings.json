@@ -1,122 +1,330 @@
 [
   {
-    "ID": "6ho0GyrWZN3mhi9zVRW7xi",
-    "Title": "Losing It",
-    "Artist": "FISHER",
-    "x": 5.991970539093018,
-    "y": 9.584501266479492,
-    "z": -9.466266632080078
+    "ID": "5rzHkSHRyZUdQcCX6noFDB",
+    "Title": "SMACK TALK",
+    "Artist": "ISOxo, Knock2, RL Grime, ISOKNOCK",
+    "x": 7.662933826446533,
+    "y": 8.541239738464355,
+    "z": 4.322068214416504
   },
   {
-    "ID": "2KXwJZv1pRQFQ95Kj60jBN",
-    "Title": "Losing It - Radio Edit",
-    "Artist": "FISHER",
-    "x": 6.328765869140625,
-    "y": 9.98515796661377,
-    "z": -9.203824043273926
+    "ID": "5NYiAtgAFWCwEpfSZOHFA7",
+    "Title": "I Wanna Know",
+    "Artist": "RL Grime, Daya",
+    "x": 8.154461860656738,
+    "y": 10.087646484375,
+    "z": 5.807301044464111
   },
   {
-    "ID": "3GCdLUSnKSMJhs4Tj6CV3s",
-    "Title": "All The Stars (with SZA)",
-    "Artist": "Kendrick Lamar, SZA",
-    "x": 5.8370842933654785,
-    "y": 10.456141471862793,
-    "z": -10.449097633361816
+    "ID": "3Y0FFtcmxdGkrCKnvuOs5q",
+    "Title": "TROUBLE",
+    "Artist": "ISOKNOCK, ISOxo, Knock2",
+    "x": 7.517009735107422,
+    "y": 9.011308670043945,
+    "z": 5.159937858581543
   },
   {
-    "ID": "5RDUCbvwPZdmjFbhZ5EY4N",
-    "Title": "Piece Of Your Heart",
-    "Artist": "MEDUZA, Goodboys",
-    "x": 6.2887983322143555,
-    "y": 9.864643096923828,
-    "z": -10.264056205749512
+    "ID": "4llK75pXNWZz6KAho2Gp16",
+    "Title": "She Will Be Loved - Radio Mix",
+    "Artist": "Maroon 5",
+    "x": 7.858865261077881,
+    "y": 9.138626098632812,
+    "z": 7.085258960723877
+  },
+  {
+    "ID": "1SAkL1mYNJlaqnBQxVZrRl",
+    "Title": "Baby Got Back",
+    "Artist": "Sir Mix-A-Lot",
+    "x": 9.072203636169434,
+    "y": 9.468193054199219,
+    "z": 7.1347174644470215
   },
   {
     "ID": "6AI3ezQ4o3HUoP6Dhudph3",
     "Title": "Not Like Us",
     "Artist": "Kendrick Lamar",
-    "x": 5.484429836273193,
-    "y": 9.321393966674805,
-    "z": -10.486693382263184
+    "x": 8.319377899169922,
+    "y": 9.294332504272461,
+    "z": 6.918445110321045
+  },
+  {
+    "ID": "6ho0GyrWZN3mhi9zVRW7xi",
+    "Title": "Losing It",
+    "Artist": "FISHER",
+    "x": 7.510533332824707,
+    "y": 8.067940711975098,
+    "z": 4.712591648101807
+  },
+  {
+    "ID": "2KXwJZv1pRQFQ95Kj60jBN",
+    "Title": "Losing It - Radio Edit",
+    "Artist": "FISHER",
+    "x": 7.083059310913086,
+    "y": 8.348420143127441,
+    "z": 4.693638801574707
+  },
+  {
+    "ID": "3GCdLUSnKSMJhs4Tj6CV3s",
+    "Title": "All The Stars (with SZA)",
+    "Artist": "Kendrick Lamar, SZA",
+    "x": 8.14635181427002,
+    "y": 8.780746459960938,
+    "z": 7.224277973175049
+  },
+  {
+    "ID": "5RDUCbvwPZdmjFbhZ5EY4N",
+    "Title": "Piece Of Your Heart",
+    "Artist": "MEDUZA, Goodboys",
+    "x": 7.35872220993042,
+    "y": 9.440885543823242,
+    "z": 5.960486888885498
   },
   {
     "ID": "19m23w2ANVhtB7rApM6pbN",
     "Title": "Back To U",
     "Artist": "SLANDER, William Black",
-    "x": 7.102361679077148,
-    "y": 10.028264999389648,
-    "z": -11.063148498535156
+    "x": 7.910548686981201,
+    "y": 10.415377616882324,
+    "z": 6.786503314971924
   },
   {
     "ID": "7F1CiKqrY44kh5cDqwHOnx",
     "Title": "Love Is Gone - Acoustic",
     "Artist": "SLANDER, Dylan Matthew",
-    "x": 6.585778713226318,
-    "y": 10.131902694702148,
-    "z": -11.36856746673584
+    "x": 8.115951538085938,
+    "y": 10.255999565124512,
+    "z": 7.027886867523193
   },
   {
     "ID": "4TIkSdsNSfqpuq6ZYvCjAz",
     "Title": "All You Need To Know (feat. Calle Lehmann)",
     "Artist": "Gryffin, SLANDER, Calle Lehmann",
-    "x": 6.855287075042725,
-    "y": 9.341652870178223,
-    "z": -10.864187240600586
+    "x": 8.058208465576172,
+    "y": 9.712885856628418,
+    "z": 5.5763654708862305
   },
   {
     "ID": "0Ev562zA4pmUsBqjxsxxdx",
     "Title": "Feel Good (with Daya)",
     "Artist": "Gryffin, ILLENIUM, Daya",
-    "x": 6.711438179016113,
-    "y": 10.58946704864502,
-    "z": -10.613415718078613
+    "x": 7.808506011962891,
+    "y": 9.748457908630371,
+    "z": 6.186652183532715
   },
   {
     "ID": "7MXVkk9YMctZqd1Srtv4MB",
     "Title": "Starboy",
     "Artist": "The Weeknd, Daft Punk",
-    "x": 7.1885199546813965,
-    "y": 9.50154972076416,
-    "z": -9.780149459838867
+    "x": 8.97666072845459,
+    "y": 9.027009010314941,
+    "z": 7.162075996398926
   },
   {
     "ID": "3BxWKCI06eQ5Od8TY2JBeA",
     "Title": "Buttons",
     "Artist": "The Pussycat Dolls",
-    "x": 7.48010778427124,
-    "y": 10.153019905090332,
-    "z": -10.023869514465332
+    "x": 9.01120376586914,
+    "y": 8.918354034423828,
+    "z": 6.449542999267578
   },
   {
     "ID": "6r5OaOArztjvur2lSqumAH",
     "Title": "Top Of The World",
     "Artist": "The Pussycat Dolls",
-    "x": 6.716010570526123,
-    "y": 10.634711265563965,
-    "z": -9.653960227966309
+    "x": 6.970877170562744,
+    "y": 9.180702209472656,
+    "z": 5.267003059387207
   },
   {
     "ID": "5UJbgR4XF4y1DvbkxEqe8S",
     "Title": "Sports car",
     "Artist": "Tate McRae",
-    "x": 5.455084800720215,
-    "y": 10.35410213470459,
-    "z": -9.763923645019531
+    "x": 6.582791805267334,
+    "y": 8.891016006469727,
+    "z": 6.847156047821045
   },
   {
     "ID": "1aklRy3btsbucImSXvR2SY",
     "Title": "Stereo Love - Original",
     "Artist": "Edward Maya, Vika Jigulina",
-    "x": 5.774670600891113,
-    "y": 9.887150764465332,
-    "z": -11.051876068115234
+    "x": 7.927677154541016,
+    "y": 9.12842082977295,
+    "z": 5.625657081604004
   },
   {
     "ID": "11Iv8RCFmeImLOpaHYxKb4",
     "Title": "Stereo Love",
     "Artist": "Edward Maya, Vika Jigulina",
-    "x": 6.011384010314941,
-    "y": 8.977246284484863,
-    "z": -10.684549331665039
+    "x": 8.326754570007324,
+    "y": 9.313830375671387,
+    "z": 5.877053260803223
+  },
+  {
+    "ID": "6qn9YLKt13AGvpq9jfO8py",
+    "Title": "We Found Love",
+    "Artist": "Rihanna, Calvin Harris",
+    "x": 7.40545129776001,
+    "y": 8.531621932983398,
+    "z": 6.890735626220703
+  },
+  {
+    "ID": "2vlDrKpOC0eSTqTDRcbYyw",
+    "Title": "This Is What You Came For",
+    "Artist": "Calvin Harris, Rihanna",
+    "x": 7.891066074371338,
+    "y": 8.387646675109863,
+    "z": 5.761940002441406
+  },
+  {
+    "ID": "3yII7UwgLF6K5zW3xad3MP",
+    "Title": "22 (Taylor's Version)",
+    "Artist": "Taylor Swift",
+    "x": 7.52982234954834,
+    "y": 8.976452827453613,
+    "z": 6.4111104011535645
+  },
+  {
+    "ID": "5UqCQaDshqbIk3pkhy4Pjg",
+    "Title": "Levels - Radio Edit",
+    "Artist": "Avicii",
+    "x": 7.763032913208008,
+    "y": 8.10260009765625,
+    "z": 4.407503604888916
+  },
+  {
+    "ID": "6Xe9wT5xeZETPwtaP2ynUz",
+    "Title": "Levels - Original Version",
+    "Artist": "Avicii",
+    "x": 7.374801158905029,
+    "y": 8.227604866027832,
+    "z": 4.209418296813965
+  },
+  {
+    "ID": "0ct6r3EGTcMLPtrXHDvVjc",
+    "Title": "The Nights",
+    "Artist": "Avicii",
+    "x": 7.9917988777160645,
+    "y": 8.397229194641113,
+    "z": 6.590076446533203
+  },
+  {
+    "ID": "4AEzAEnbm9uRgbmTdeI63K",
+    "Title": "MIDDLE CHILD",
+    "Artist": "PnB Rock, XXXTENTACION",
+    "x": 9.351619720458984,
+    "y": 9.163323402404785,
+    "z": 6.774386405944824
+  },
+  {
+    "ID": "1aKvZDoLGkNMxoRYgkckZG",
+    "Title": "Magnetic",
+    "Artist": "ILLIT",
+    "x": 7.150663375854492,
+    "y": 9.323209762573242,
+    "z": 7.3836894035339355
+  },
+  {
+    "ID": "1SNbKSraeBuFBuHeSpHLis",
+    "Title": "Magnetic (Starlight Remix)",
+    "Artist": "ILLIT",
+    "x": 6.503251075744629,
+    "y": 9.41729736328125,
+    "z": 6.0796098709106445
+  },
+  {
+    "ID": "0znsc67nMhP4X9hjhvoyeP",
+    "Title": "Tick-Tack",
+    "Artist": "ILLIT",
+    "x": 6.381652355194092,
+    "y": 9.400601387023926,
+    "z": 6.8148417472839355
+  },
+  {
+    "ID": "56v8WEnGzLByGsDAXDiv4d",
+    "Title": "ETA",
+    "Artist": "NewJeans",
+    "x": 6.780962944030762,
+    "y": 9.524994850158691,
+    "z": 6.969753265380859
+  },
+  {
+    "ID": "65FftemJ1DbbZ45DUfHJXE",
+    "Title": "OMG",
+    "Artist": "NewJeans",
+    "x": 6.786381721496582,
+    "y": 9.570928573608398,
+    "z": 7.4527668952941895
+  },
+  {
+    "ID": "02wk5BttM0QL38ERjLPQJB",
+    "Title": "Cool With You",
+    "Artist": "NewJeans",
+    "x": 7.718767166137695,
+    "y": 10.200223922729492,
+    "z": 7.459104537963867
+  },
+  {
+    "ID": "6rdkCkjk6D12xRpdMXy0I2",
+    "Title": "New Jeans",
+    "Artist": "NewJeans",
+    "x": 7.419937610626221,
+    "y": 9.869678497314453,
+    "z": 7.528219223022461
+  },
+  {
+    "ID": "5ocSQW5sIUIOFojwXEz9Ki",
+    "Title": "Supernatural",
+    "Artist": "NewJeans",
+    "x": 6.402838230133057,
+    "y": 9.356663703918457,
+    "z": 7.292519569396973
+  },
+  {
+    "ID": "74X2u8JMVooG2QbjRxXwR8",
+    "Title": "Perfect Night",
+    "Artist": "LE SSERAFIM",
+    "x": 7.521343231201172,
+    "y": 8.454529762268066,
+    "z": 6.211352825164795
+  },
+  {
+    "ID": "2O4Bb2WCkjlTPO827OnBMI",
+    "Title": "EASY",
+    "Artist": "LE SSERAFIM",
+    "x": 7.329342365264893,
+    "y": 9.645984649658203,
+    "z": 6.808662414550781
+  },
+  {
+    "ID": "3AoEQRuFf8zVXWqSLo2UOi",
+    "Title": "CRAZY",
+    "Artist": "LE SSERAFIM",
+    "x": 7.039470195770264,
+    "y": 8.336677551269531,
+    "z": 5.919008255004883
+  },
+  {
+    "ID": "5v7oj9PosKdE39x9uwDs6C",
+    "Title": "dancinwithsomebawdy",
+    "Artist": "ericdoa",
+    "x": 6.838245868682861,
+    "y": 9.485281944274902,
+    "z": 5.627874851226807
+  },
+  {
+    "ID": "2u9S9JJ6hTZS3Vf22HOZKg",
+    "Title": "NOKIA",
+    "Artist": "Drake",
+    "x": 8.639015197753906,
+    "y": 8.524170875549316,
+    "z": 6.998757362365723
+  },
+  {
+    "ID": "2vxsdAnntt6eGZJJRaLBF6",
+    "Title": "palm of my hands - Odd Mob Remix",
+    "Artist": "John Summit, Odd Mob, venbee",
+    "x": 6.975505828857422,
+    "y": 8.675262451171875,
+    "z": 5.5181145668029785
   }
 ]

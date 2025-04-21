@@ -133,12 +133,17 @@ body {
 }
 
 h1 {
-    color: #FFEB53;
+    /* color: #FFEB53; */
     font-size: 5rem;
 }
 
 h2 {
+    color: #FFEB53;
     margin-left: 2vw;
+}
+
+h2:hover {
+    color: #918421;
 }
 
 .modal {
@@ -406,6 +411,11 @@ search-song-section
     font-weight: bold;
 }
 
+.search-container button:hover {
+    background-color: #918421;
+    color: rgb(0, 0, 0);
+}
+
 #result {
     display: flex;
     flex-wrap: wrap; /* This allows them to wrap on small screens */
@@ -445,7 +455,7 @@ search-song-section
 }
 
 .highlight {
-    color: yellow;
+    color: #FFEB53;
     font-weight: bold; /* optional */
 }
 
@@ -458,5 +468,14 @@ search-song-section
     margin-bottom: 2vh;
 }
 
-
+.logo-link {
+    text-decoration: none;  /* Removes the underline */
+    color: #FFEB53;           /* Set the default color to white (or any color you prefer) */
+    transition: color 0.1s ease; /* Smooth transition for color change */
+  }
+  
+/* Hover effect - change the color */
+.logo-link:hover {
+    color: #918421; /* Change to any color you like */
+}
 

@@ -13,7 +13,7 @@ import requests
 import subprocess
 
 # blueprints
-from routes.auth import auth_bp
+# from routes.auth import auth_bp
 # from routes.room import room_bp
 from routes.search import search_bp
 from routes.vector_db import vector_db_bp
@@ -35,7 +35,7 @@ SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 
 # threading.Thread(target=start_audio, daemon=True).start()
 
-app.register_blueprint(auth_bp)
+# app.register_blueprint(auth_bp)
 # app.register_blueprint(room_bp)
 app.register_blueprint(search_bp)
 app.register_blueprint(vector_db_bp)

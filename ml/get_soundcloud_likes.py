@@ -13,9 +13,12 @@ def get_likes(username):
     driver.get(f"https://soundcloud.com/{username}/likes")
     time.sleep(5)  # wait for content to load
 
-    # Scroll to load more (optional)
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(5)
+    # Scroll multiple times to load more tracks
+    scroll_count = 0
+    while scroll_count < 5:  # scroll 5 times (adjust if necessary)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(5)  # wait for content to load after each scroll
+        scroll_count += 1
 
     # Get page source and parse
     soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -34,7 +37,7 @@ def get_likes(username):
 
     driver.quit()
 
-    # Print results
+    # Print results (optional)
     # for track in tracks:
     #     print(f"{track['title']} by {track['artist']}\nLink: {track['link']}\n")
 

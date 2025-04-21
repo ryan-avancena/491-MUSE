@@ -17,9 +17,14 @@
 </head>
 <body>
     <header class="site-header">
-        <h1>MUSE</h1>
+        <a href="/" class="logo-link">
+            <h1>MUSE</h1>
+        </a>
+
         <h2 id="howItWorksBtn" style="cursor: pointer;">how it works</h2>
-        <h2>my other projects</h2>
+        <a href="https://ravancena.vercel.app/" class="logo-link" target="_blank" rel="noopener noreferrer">
+            <h2>about me</h2>
+        </a>
     </header>
 
     <div id="howItWorksModal" class="modal">
@@ -31,15 +36,15 @@
             
                 <h4>preface</h4>
                 <p>This project is mainly intended for DJs or anybody who uses the SoundCloud streaming service.</p>
-                <p>RekordBox and Serato Pro support SoundCloud Go for DJs.</p>
-            
+                <p>RekordBox and Serato Pro support SoundCloud Go+ for DJs and DJs are able to see trakcs that they've liked from SoundCloud.</p>
+                <p>I also included a search feature for users to quickly search songs for their metrics.</p>
                 <h4>how it works</h4>
                 <ol class="how-it-works">
                     <li>A user enters their SoundCloud account name into the search bar.</li>
                     <li>The application begins to scrape the users' liked songs on SoundCloud.</li>
                     <li>After scraping the users liked songs, we leverage the Tunebat API to get embedded metrics of songs (popularity, key, bpm, etc.).</li>
                     <li>We also use the last.fm API to get tags about the users' liked songs.</li>
-                    <li>After collecting this information, we combine the song's tags and metrics into one cohesive DataFrame</li>
+                    <li>After collecting this information, we combine the song's tags and metrics into one cohesive DataFrame.</li>
                     <li>We apply FAISS embeddings to embed the songs in a 3D space.</li> 
                     <li>After the embeddings are made, [you] can see the songs in this embedded space to find potential tracks to mix by searching the table or clicking in the space.</li>
                 </ol>
@@ -108,7 +113,7 @@
         const btn = document.getElementById("howItWorksBtn");
         const span = document.querySelector(".close-btn");
     
-        // Show modal when "how it works" is clicked
+        //  modal when "how it works" is clicked
         btn.onclick = function () {
             modal.style.display = "block";
         };

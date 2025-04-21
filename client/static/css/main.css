@@ -112,7 +112,8 @@ body {
     height: 100vh;
     text-align: center;
     padding: 1rem;
-    background-color: black;
+    overflow: hidden; /* Prevent scrollbars */
+    background: #000; /* Dark background for stars to show up */
     color: #FFEB53;
 }
 
@@ -162,6 +163,24 @@ input[type="submit"] {
   opacity: 1; /* slightly transparent so we can still see the input */
 }
 
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #FFEB53;
+  border-radius: 50%;
+  animation: float linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(-100vh);
+  }
+}
 
 /* Optional: Responsive tweaks */
 @media (max-width: 768px) {
