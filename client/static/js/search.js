@@ -24,28 +24,21 @@ function displayResult(result) {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
 
-    result.slice(0, 5).forEach(song => {
+    result.slice(0, 4).forEach(song => {
         const songDiv = document.createElement('div');
         songDiv.classList.add('songDiv');
         songDiv.innerHTML = `
-            <h3>${song.n}</h3>
-            <p><strong>Artist(s):</strong> ${song.as.join(', ')}</p>
-            <p><strong>Album:</strong> ${song.an}</p>
-            <p><strong>Duration:</strong> ${(song.d / 1000).toFixed(2)} seconds</p>
             <img src="${song.ci[0].iu}" alt="Thumbnail" width="150">
-            <h4>DJ Metrics:</h4>
-            <ul>
-                <p><strong>BPM:</strong> ${song.b} | <strong>Key:</strong> ${song.k} | <strong>Camelot:</strong> ${song.c}</p>
-                <p><strong>Duration:</strong> ${song.d} | <strong>Release Date:</strong> ${song.rd}</p>
-                <li><strong>Popularity:</strong> ${song.p}</li>
-                <li><strong>Energy:</strong> ${song.e}</li>
-                <li><strong>Danceability:</strong> ${song.da}</li>
-                <li><strong>Happiness:</strong> ${song.h}</li>
-                <li><strong>Instrumentalness:</strong> ${song.i}</li>
-                <li><strong>Liveness:</strong> ${song.li}</li>
-                <li><strong>Loudness:</strong> ${song.lo}</li>
-                <li><strong>Speechiness:</strong> ${song.s}</li>
-            </ul>
+            <h3>${song.n}</h3>
+            <h4>${song.as.join(', ')}</h4>
+            <h5>BPM:</strong> ${song.b} | <strong>Key:</strong> ${song.k} | <strong>Camelot:</strong> ${song.c}</h5>
+            <hr>
+            <p>Popularity: ${song.p}</p>
+            <p>Energy: ${song.e}</p>
+            <p>Danceability: ${song.da}</p>
+            <p>Happiness: ${song.h}</p>
+            <p>Instrumentalness: ${song.i}</p>
+            <p>Speechiness: ${song.s}</p>
         `;
         resultDiv.appendChild(songDiv);
     });

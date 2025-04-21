@@ -10,14 +10,96 @@
 <body>
     <h1>MUSE</h1>
 
-    <a href="{{ url_for('dj') }}">
+    <!-- <a href="{{ url_for('dj') }}">
         <button>start session</button>
-    </a>
+    </a> -->
 
-    <form action="/submit-soundcloud" method="POST">
-        <input type="text" id="soundcloud_username" name="soundcloud_username"><br><br>
-        <input type="submit" value="Submit">
+    <div id="loading-bar" style="display: none; height: 4px; background: yellow; width: 0%; transition: width 0.4s;"></div>
+
+    <form id="soundcloud-form" action="/submit-soundcloud" method="POST">
+        <div class="input-wrapper">
+            <input type="text" id="soundcloud_username" name="soundcloud_username" placeholder="enter soundcloud username...">
+        </div>        
+        <input type="submit" value="START">
     </form>
 
+    <script>
+        const form = document.getElementById('soundcloud-form');
+        
+        form.addEventListener('submit', (e) => {
+            // Optional: prevent actual form submission for testing
+            // e.preventDefault();
+        
+            const overlay = form;
+        
+            let progress = 0;
+            const interval = setInterval(() => {
+                if (progress >= 100) {
+                    clearInterval(interval);
+                } else {
+                    progress += 5;
+                    form.style.setProperty('--progress', progress + '%');
+                    form.style.setProperty('--animate-form', 'yes');
+                    form.querySelector('::before'); // triggers reflow
+                    form.style.setProperty('--form-before-width', progress + '%');
+                    form.style.setProperty('--transition', 'width 0.2s ease');
+                    form.style.setProperty('--background-color', 'yellow');
+                    
+                    // animation:
+                    form.style.setProperty('--animate-form', 'yes');
+                    form.style.setProperty('--before-width', progress + '%');
+        
+                    // Set the width manually on the ::before pseudo-element
+                    form.style.setProperty('--before-width', progress + '%');
+                    form.style.setProperty('--before-style', `width: ${progress}%`);
+                    form.style.cssText += `--before-width:${progress}%;`;
+                    form.style.setProperty('--form-width', progress + '%');
+                    form.style.setProperty('--beforeWidth', progress + '%');
+                    form.style.setProperty('--progressWidth', progress + '%');
+        
+                    form.style.setProperty('--width', progress + '%');
+        
+                    form.style.setProperty('--progress-width', `${progress}%`);
+                    form.style.setProperty('--form-progress', `${progress}%`);
+                    form.style.setProperty('--bg-progress', `${progress}%`);
+                    form.style.setProperty('--yellow-line', `${progress}%`);
+        
+                    form.style.setProperty('--before-width', `${progress}%`);
+                    form.style.setProperty('--custom-width', `${progress}%`);
+        
+                    // Most important line:
+                    form.style.setProperty('--form-before-width', `${progress}%`);
+                    form.style.setProperty('--pseudoWidth', `${progress}%`);
+                    form.style.setProperty('--animation-width', `${progress}%`);
+        
+                    // Actually animate using style:
+                    form.style.setProperty('--form-overlay-width', `${progress}%`);
+                    form.style.setProperty('--yellow-bar', `${progress}%`);
+        
+                    form.style.setProperty('--overlayWidth', `${progress}%`);
+        
+                    // This works:
+                    form.style.setProperty('--overlay-width', `${progress}%`);
+                    form.style.setProperty('--overlay', `${progress}%`);
+                    form.style.setProperty('--bg-fill', `${progress}%`);
+        
+                    form.style.setProperty('--width-progress', `${progress}%`);
+        
+                    // And finally, this:
+                    form.style.setProperty('--overlay-progress', `${progress}%`);
+        
+                    // But the one that matters:
+                    form.querySelector('style')?.remove(); // clean up if any
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+                        #soundcloud-form::before {
+                            width: ${progress}%;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+            }, 50);
+        });
+    </script>
 </body>
 </html>

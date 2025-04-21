@@ -7,14 +7,14 @@ from flask import Flask, request, render_template, redirect, url_for
 from flask_socketio import SocketIO, join_room, leave_room, send
 from dotenv import load_dotenv
 import threading
-from render_audio import audio_recording
+# from render_audio import audio_recording
 import pandas as pd 
 import requests
 import subprocess
 
 # blueprints
 from routes.auth import auth_bp
-from routes.room import room_bp
+# from routes.room import room_bp
 from routes.search import search_bp
 from routes.vector_db import vector_db_bp
 
@@ -30,13 +30,13 @@ load_dotenv(dotenv_path)
 
 SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 
-def start_audio():
-    audio_recording(socketio)
+# def start_audio():
+#     audio_recording(socketio)
 
-threading.Thread(target=start_audio, daemon=True).start()
+# threading.Thread(target=start_audio, daemon=True).start()
 
 app.register_blueprint(auth_bp)
-app.register_blueprint(room_bp)
+# app.register_blueprint(room_bp)
 app.register_blueprint(search_bp)
 app.register_blueprint(vector_db_bp)
 

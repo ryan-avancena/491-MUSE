@@ -10,14 +10,14 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
     <script src="{{ url_for('static', filename='js/table.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/glow.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/glow.js') }}"></script> -->
     <!-- <script src="{{ url_for('static', filename='js/recommend.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/visualizer.js') }}"></script>
     <title>MUSE</title>
 </head>
 <body>
     <header class="site-header">
-        <h1 id="glow-text">MUSE</h1>
+        <h1>MUSE</h1>
         <h2 id="howItWorksBtn" style="cursor: pointer;">how it works</h2>
         <h2>my other projects</h2>
     </header>
@@ -27,19 +27,23 @@
             <span class="close-btn">&times;</span>
             <h1>muse</h1>
             <div class="personal-message">
-                <p>Keep in mind, I have only tried mixing twice in my life (and I loved it).</p>
-                <p>But I always listen to Boiler Rooms, live sets, or festival music whenever I study.</p>
-                <p>Plus, it has always been one of my dreams to be a producer/DJ/or a contributor to the music industry.</p>
-                <p>With that being said, MUSE is my "first contribution" to this industry.</p>
+                <p>Keep in mind, I have only tried mixing twice in my life (and I loved it). I always listen to Boiler Rooms, live sets, or festival music whenever I study, and it has always been one of my dreams to be a producer/DJ/or a contributor to the music industry. With that being said, <span class="highlight">MUSE</span> is my "first contribution" to this industry.</p>
+            
+                <h4>preface</h4>
+                <p>This project is mainly intended for DJs or anybody who uses the SoundCloud streaming service.</p>
+                <p>RekordBox and Serato Pro support SoundCloud Go for DJs.</p>
+            
+                <h4>how it works</h4>
+                <ol class="how-it-works">
+                    <li>A user enters their SoundCloud account name into the search bar.</li>
+                    <li>The application begins to scrape the users' liked songs on SoundCloud.</li>
+                    <li>After scraping the users liked songs, we leverage the Tunebat API to get embedded metrics of songs (popularity, key, bpm, etc.).</li>
+                    <li>We also use the last.fm API to get tags about the users' liked songs.</li>
+                    <li>After collecting this information, we combine the song's tags and metrics into one cohesive DataFrame</li>
+                    <li>We apply FAISS embeddings to embed the songs in a 3D space.</li> 
+                    <li>After the embeddings are made, [you] can see the songs in this embedded space to find potential tracks to mix by searching the table or clicking in the space.</li>
+                </ol>
             </div>
-
-            <h4>how it works</h4>
-            <ol class="how-it-works">
-                <li>A user enters their SoundCloud account name into the search bar.</li>
-                <li>The application begins to scrape the users' liked songs, as you can connect SoundCloud+ to software like Rekordbox and Serato Pro.</li>
-                <li>After scraping and embedding the users' liked songs, we apply FAISS embeddings to embed the songs in a 3D space.</li>
-                <li>The DJ can see the songs in this embedded space to find potential tracks to mix by searching the table or clicking in the space.</li>
-            </ol>
         </div>
     </div>
 
@@ -84,15 +88,17 @@
         <ul id="song-requests"></ul>
     </div> -->
 
-    <h2>search</h2>
+    <!-- <h2>search</h2> -->
     <div class="search-container">
         <form id="data-form">
-            <input type="text" id="data" name="data" required>
+            <input type="text" id="data" name="data" placeholder="Search for a song... (e.g: out of time - the weeknd)">
             <button type="submit">search</button>
         </form>
 
-        <h2>Result:</h2>
-        <div id="result"></div>
+        <div id="result-container">
+            <div id="result"></div>
+        </div>
+
     </div>
 
     <script src="{{ url_for('static', filename='js/search.js') }}"></script>

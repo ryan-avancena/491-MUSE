@@ -120,31 +120,48 @@ h1 {
     font-size: 20vw;
 }
 
-button {
-    padding: 1em 2em;
-    font-size: 1rem;
-    margin: 1rem;
-    min-width: 150px;
-    max-width: 90%;
-    width: 20vw; /* responsive width */
-    height: auto;
-    border-radius: 10px;
-    color: white;
-    background-color: black;
+input[type="text"] {
+  width: 15vw;
+  padding: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  text-align: center;
 }
 
-#progress-container {
-  display: none;
-  width: 100%;
-  background-color: #ddd;
-  margin-top: 20px;
+input[type="submit"] {
+  margin-top: 2vh;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: #FFEB53;
+  color: #222;
+  border: none;
+  cursor: pointer;
 }
-#progress-bar {
+
+#soundcloud-form {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#soundcloud-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 51%;
   width: 0%;
-  height: 20px;
-  background-color: #4CAF50;
-  transition: width 0.4s ease;
+  background-color: #FFEB53;
+  z-index: 2;
+  pointer-events: none;
+  transition: width 0.2s ease;
+  border-radius: 30px;
+  opacity: 1; /* slightly transparent so we can still see the input */
 }
+
 
 /* Optional: Responsive tweaks */
 @media (max-width: 768px) {

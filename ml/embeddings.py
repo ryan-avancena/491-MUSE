@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 import faiss
 from sklearn.feature_extraction.text import TfidfVectorizer
-import umap
+from umap.umap_ import UMAP
 import json
 import csv
 
@@ -49,7 +49,7 @@ def find_similar_tracks(song_id, track_vectors, final_df, index, track_metadata,
 
 
 def generate_visualization_json(track_vectors, final_df, out_path):
-    reducer = umap.UMAP(n_components=3, random_state=42)
+    reducer = UMAP(n_components=3, random_state=42)
     embedding_3d = reducer.fit_transform(track_vectors)
 
     viz_df = final_df[["ID", "Title", "Artist"]].copy()

@@ -132,6 +132,11 @@ body {
     padding: 2rem;  
 }
 
+h1 {
+    color: #FFEB53;
+    font-size: 5rem;
+}
+
 h2 {
     margin-left: 2vw;
 }
@@ -175,7 +180,7 @@ h2 {
 .modal-content h1 {
     color: #FFEB53;
     line-height: 1.4; /* improves readability between lines within each element */
-    font-size: 6rem;
+    font-size: 4.5rem;
 }
 
 .modal-content h4 {
@@ -213,7 +218,7 @@ h2 {
 /* Recommendation Section */
 .recommendation-section {
     width: 90vw;
-    height: 80vh;
+    /* height: 80vh; */
     margin-top: 0;
     display: flex;
     flex-direction: row;
@@ -224,7 +229,7 @@ h2 {
 
 #visualizer{
     width: 35vw;
-    height: 70vh;
+    /* height: 70vh; */
     flex-shrink: 0;
 }
 
@@ -376,18 +381,82 @@ search-song-section
 
 */
 
-.search-song-section {
-    width: 100vw;
+#data-form {
+    margin-left: 2vw;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1vw; /* spacing between input and button */
+}
+
+.search-container input {
+    width: 20vw;
+    padding: 0.5rem;
+    font-style: italic;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #FFEB53;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap; /* This allows them to wrap on small screens */
+    justify-content: center; /* Or 'space-between' for spacing */
+    gap: 20px; /* Optional: adds spacing between items */
+    margin-top: 20px;
 }
 
 .songDiv {
-    display: flex;
-    justify-content: space-between;
+    width: 400px; 
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
+    /* height: 300px; */
+    padding: 3rem;
+    border: solid 2px #7D7D7D;
+    border-radius: 30px;
 }
+
+.songDiv h3 {
+    font-size: 2rem;
+    margin-top: 1vh;
+    color: #FFEB53;
+}
+
+.songDiv h4 {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #afa344;
+}
+
+.songDiv h5 {
+    line-height: 1.6;
+    font-size: 0.8rem;
+    color: #e188eb;
+}
+
+.highlight {
+    color: yellow;
+    font-weight: bold; /* optional */
+}
+
+.songDiv p {
+    line-height: 1.6;
+}
+
+.songDiv hr {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+
 

@@ -11,7 +11,7 @@ $(document).ready(function () {
         console.log('Song ID:', songId);
     });
 
-    $('#tracksTable_filter input').attr('placeholder', 'Search for songs...');
+    $('#tracksTable_filter input').attr('placeholder', 'Search for songs within SoundCloud likes...');
 
     // Optionally, you can style the input field to customize its appearance
     $('#tracksTable_filter input').css({

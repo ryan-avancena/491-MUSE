@@ -4,7 +4,7 @@ import { search } from './tunebat.js';
 async function searchSong(query) {
     try {
         const results = await search(query);
-        const top5Results = results.slice(0, 3);
+        const top5Results = results.slice(0, 4);
         process.stdout.write(JSON.stringify(top5Results));
     } catch (error) {
         process.stderr.write(JSON.stringify({ error: 'Error searching', details: error.message }));
